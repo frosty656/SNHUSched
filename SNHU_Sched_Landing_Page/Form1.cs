@@ -64,5 +64,11 @@ namespace SNHU_Sched_Landing_Page
         {
 
         }
+
+        private void signUp_Click(object sender, EventArgs e)
+        {
+            NewAccount1 newAccount = new NewAccount1();
+            newAccount.ShowDialog();
+        }
     }
 }
