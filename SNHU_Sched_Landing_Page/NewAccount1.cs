@@ -29,24 +29,21 @@ namespace SNHU_Sched_Landing_Page
 				string lastName = email.Split('.')[1];
 				lastName = lastName.Split('@')[0];
 
-
-				NewUser(Int32.Parse(StudentID.Text), firstName, lastName, Email.Text, Password.Text);
+				NewUser(Int32.Parse(StudentID.Text), firstName, lastName, Email.Text, GenerateHash(Password.Text, Email.Text));
 			}
 
 
 
         }
 
-        //Checking Email
-
         private void Email_TextChanged(object sender, EventArgs e)
         {
-            try
+            if(Email.Text.Contains("@snhu.edu"))
             {
-                var email = new System.Net.Mail.MailAddress(Email.Text);
+				
                 EmailColor.BackColor = Color.Green;
             }
-            catch
+            else
             {
                 EmailColor.BackColor = Color.Red;
             }
@@ -146,7 +143,7 @@ namespace SNHU_Sched_Landing_Page
             }
         }
 
-		public void NewUser(int uniqueID, string firstName, string lastName, string email, string password)
+		private void NewUser(int uniqueID, string firstName, string lastName, string email, string password)
 		{
 			string connectionString = null;
 			MySqlConnection cnn;
@@ -165,6 +162,13 @@ namespace SNHU_Sched_Landing_Page
 			{
 				Console.WriteLine("Error: {0}", ex.ToString());
 			}
+		}
+
+		private static string GenerateHash(string value, string salt)
+		{
+			byte[] data = System.Text.Encoding.ASCII.GetBytes(salt + value);
+			data = System.Security.Cryptography.MD5.Create().ComputeHash(data);
+			return Convert.ToBase64String(data);
 		}
 	}
 }
