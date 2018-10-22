@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
+using MySql.Data;
 
 namespace SNHU_Sched_Landing_Page
 {
@@ -19,6 +21,19 @@ namespace SNHU_Sched_Landing_Page
 
         private void SignUpButton_Click(object sender, EventArgs e)
         {
+			if (SignUpButton.BackColor == Color.Green)
+			{
+				//Get first and last name from email
+				string email = Email.Text;
+				string firstName = email.Split('.')[0];
+				string lastName = email.Split('.')[1];
+				lastName = lastName.Split('@')[0];
+
+
+				NewUser(Int32.Parse(StudentID.Text), firstName, lastName, Email.Text, Password.Text);
+			}
+
+
 
         }
 
@@ -129,5 +144,26 @@ namespace SNHU_Sched_Landing_Page
                 SignUpButton.BackColor = Color.Gray;
             }
         }
-    }
+
+		public void NewUser(int uniqueID, string firstName, string lastName, string email, string password)
+		{
+			string connectionString = null;
+			MySqlConnection cnn;
+			connectionString = "server=localhost;database=jacobdb;uid=root;pwd=*/x-y7UG_cq&;";
+			cnn = new MySqlConnection(connectionString);
+
+			try
+			{
+				cnn.Open();
+				MySqlCommand cmd = new MySqlCommand();
+				cmd.Connection = cnn;
+				cmd.CommandText = $"INSERT INTO usertable VALUES ('{uniqueID}', '{firstName}', '{lastName}', '{email}', '{password}')";
+				cmd.ExecuteNonQuery();
+			}
+			catch (Exception ex)
+			{
+				Console.WriteLine("Error: {0}", ex.ToString());
+			}
+		}
+	}
 }
