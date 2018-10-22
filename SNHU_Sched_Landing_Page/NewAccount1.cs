@@ -55,6 +55,7 @@ namespace SNHU_Sched_Landing_Page
 
         private void Password_TextChanged(object sender, EventArgs e)
         {
+			ConfirmPassword.Text = "";
             if (Password.Text.Length > 21)
             {
                 MessageBox.Show("The password must be between 8 and 20 characters");
