@@ -158,10 +158,25 @@ namespace SNHU_Sched_Landing_Page
 				cmd.CommandText = $"INSERT INTO usertable VALUES ('{uniqueID}', '{firstName}', '{lastName}', '{email}', '{password}')";
 				cmd.ExecuteNonQuery();
 			}
-			catch (Exception ex)
+			catch (MySqlException ex)
 			{
-				Console.WriteLine("Error: {0}", ex.ToString());
+				Console.WriteLine("Error: {0}", ex.Number);
+
+
 			}
+		}
+
+		private void MySqlErrorMessage(int errorNum)
+		{
+			switch (errorNum) {
+				case 1062:
+					MessageBox.Show("This email or ID is already in use");
+					break;
+				default:
+					MessageBox.Show("There was an unknown error");
+					break;
+			}
+
 		}
 
 		private static string GenerateHash(string value, string salt)
