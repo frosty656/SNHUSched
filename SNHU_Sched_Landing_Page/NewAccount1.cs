@@ -8,7 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
-using MySql.Data;
+using MySql;
+
 
 namespace SNHU_Sched_Landing_Page
 {
@@ -145,6 +146,12 @@ namespace SNHU_Sched_Landing_Page
 
 		private void NewUser(int uniqueID, string firstName, string lastName, string email, string password)
 		{
+				SQLCommand($"INSERT INTO usertable VALUES ('{uniqueID}', '{firstName}', '{lastName}', '{email}', '{password}')");
+
+		}
+
+		private void SQLCommand(string command)
+		{
 			string connectionString = null;
 			MySqlConnection cnn;
 			connectionString = "server=localhost;database=jacobdb;uid=root;pwd=*/x-y7UG_cq&;";
@@ -155,20 +162,21 @@ namespace SNHU_Sched_Landing_Page
 				cnn.Open();
 				MySqlCommand cmd = new MySqlCommand();
 				cmd.Connection = cnn;
-				cmd.CommandText = $"INSERT INTO usertable VALUES ('{uniqueID}', '{firstName}', '{lastName}', '{email}', '{password}')";
+					cmd.CommandText = command;
 				cmd.ExecuteNonQuery();
 			}
 			catch (MySqlException ex)
 			{
-				Console.WriteLine("Error: {0}", ex.Number);
-
+				MySqlErrorMessage(ex.Number);
 
 			}
+			cnn.Close();
 		}
 
 		private void MySqlErrorMessage(int errorNum)
 		{
-			switch (errorNum) {
+			switch (errorNum)
+			{
 				case 1062:
 					MessageBox.Show("This email or ID is already in use");
 					break;
