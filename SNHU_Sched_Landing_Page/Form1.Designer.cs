@@ -37,6 +37,7 @@
 			this.textBox3 = new System.Windows.Forms.TextBox();
 			this.textBox4 = new System.Windows.Forms.TextBox();
 			this.signUp = new System.Windows.Forms.Button();
+			this.DeleteMe = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -142,12 +143,23 @@
 			this.signUp.UseVisualStyleBackColor = true;
 			this.signUp.Click += new System.EventHandler(this.signUp_Click);
 			// 
+			// DeleteMe
+			// 
+			this.DeleteMe.Location = new System.Drawing.Point(593, 206);
+			this.DeleteMe.Name = "DeleteMe";
+			this.DeleteMe.Size = new System.Drawing.Size(136, 23);
+			this.DeleteMe.TabIndex = 9;
+			this.DeleteMe.Text = "Go to class input";
+			this.DeleteMe.UseVisualStyleBackColor = true;
+			this.DeleteMe.Click += new System.EventHandler(this.DeleteMe_Click);
+			// 
 			// HomePage
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.DarkGray;
 			this.ClientSize = new System.Drawing.Size(747, 386);
+			this.Controls.Add(this.DeleteMe);
 			this.Controls.Add(this.signUp);
 			this.Controls.Add(this.textBox4);
 			this.Controls.Add(this.usernameInput);
@@ -177,6 +189,7 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Button signUp;
-    }
+		private System.Windows.Forms.Button DeleteMe;
+	}
 }
 

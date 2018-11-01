@@ -23,5 +23,47 @@ namespace SNHU_Sched_Landing_Page
 		{
 
 		}
+
+		private string getInfo()
+		{
+			return "end";
+		}
+
+		private void SQLCommand(string command)
+		{
+			string connectionString = null;
+			MySqlConnection cnn;
+			connectionString = "server=localhost;database=jacobdb;uid=root;pwd=*/x-y7UG_cq&;";
+			cnn = new MySqlConnection(connectionString);
+
+			try
+			{
+				cnn.Open();
+				MySqlCommand cmd = new MySqlCommand();
+				cmd.Connection = cnn;
+				cmd.CommandText = command;
+				cmd.ExecuteNonQuery();
+			}
+			catch (MySqlException ex)
+			{
+				MySqlErrorMessage(ex.Number);
+
+			}
+			cnn.Close();
+		}
+
+		private void MySqlErrorMessage(int errorNum)
+		{
+			switch (errorNum)
+			{
+				case 1062:
+					MessageBox.Show("This email or ID is already in use");
+					break;
+				default:
+					MessageBox.Show("There was an unknown error");
+					break;
+			}
+
+		}
 	}
 }

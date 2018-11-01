@@ -157,5 +157,11 @@ namespace SNHU_Sched_Landing_Page
 
 			return storedPass;
 		}
+
+		private void DeleteMe_Click(object sender, EventArgs e)
+		{
+			Schedule_Input scheduleInput = new Schedule_Input();
+			scheduleInput.ShowDialog();
+		}
 	}
 }

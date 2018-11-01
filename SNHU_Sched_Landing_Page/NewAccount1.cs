@@ -31,6 +31,9 @@ namespace SNHU_Sched_Landing_Page
 				lastName = lastName.Split('@')[0];
 
 				NewUser(Int32.Parse(StudentID.Text), firstName, lastName, Email.Text, GenerateHash(Password.Text, Email.Text));
+
+				Schedule_Input scheduleInput = new Schedule_Input();
+				scheduleInput.ShowDialog();
 			}
 
 
