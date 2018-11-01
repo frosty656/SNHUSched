@@ -50,7 +50,7 @@ namespace SNHU_Sched_Landing_Page
 		{
 				string connectionString = null;
 				MySqlConnection cnn;
-				connectionString = "server=localhost;database=jacobdb;uid=root;pwd=*/x-y7UG_cq&;";
+				connectionString = "server=localhost;database=jacobdb;uid=root;pwd=1pl4ym1d;";
 				cnn = new MySqlConnection(connectionString);
 
 				try
@@ -68,6 +68,6 @@ namespace SNHU_Sched_Landing_Page
 				}
 				cnn.Close();
 		}
-	}
+    }
 
 }
