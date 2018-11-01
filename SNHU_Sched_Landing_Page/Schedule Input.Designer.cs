@@ -47,7 +47,7 @@
             // 
             this.AddClassLabel.AutoSize = true;
             this.AddClassLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 45.85714F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddClassLabel.Location = new System.Drawing.Point(540, 43);
+            this.AddClassLabel.Location = new System.Drawing.Point(561, 41);
             this.AddClassLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.AddClassLabel.Name = "AddClassLabel";
             this.AddClassLabel.Size = new System.Drawing.Size(632, 122);
@@ -147,7 +147,7 @@
             "Wednesday",
             "Thursday",
             "Friday"});
-            this.comboBox1.Location = new System.Drawing.Point(1252, 380);
+            this.comboBox1.Location = new System.Drawing.Point(1205, 380);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(6);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(219, 32);
@@ -157,23 +157,23 @@
             // 
             this.firstDayLabel.AutoSize = true;
             this.firstDayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.firstDayLabel.Location = new System.Drawing.Point(1013, 380);
+            this.firstDayLabel.Location = new System.Drawing.Point(1018, 348);
             this.firstDayLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.firstDayLabel.Name = "firstDayLabel";
-            this.firstDayLabel.Size = new System.Drawing.Size(237, 32);
+            this.firstDayLabel.Size = new System.Drawing.Size(175, 64);
             this.firstDayLabel.TabIndex = 9;
-            this.firstDayLabel.Text = "First Day of Week";
+            this.firstDayLabel.Text = "First \r\nDay of Week";
             // 
             // secondDayLabel
             // 
             this.secondDayLabel.AutoSize = true;
             this.secondDayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.secondDayLabel.Location = new System.Drawing.Point(961, 463);
+            this.secondDayLabel.Location = new System.Drawing.Point(1018, 431);
             this.secondDayLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.secondDayLabel.Name = "secondDayLabel";
-            this.secondDayLabel.Size = new System.Drawing.Size(279, 32);
+            this.secondDayLabel.Size = new System.Drawing.Size(175, 64);
             this.secondDayLabel.TabIndex = 10;
-            this.secondDayLabel.Text = "Second Day of Week";
+            this.secondDayLabel.Text = "Second \r\nDay of Week";
             // 
             // comboBox2
             // 
@@ -184,7 +184,7 @@
             "Wednesday",
             "Thursday",
             "Friday"});
-            this.comboBox2.Location = new System.Drawing.Point(1252, 463);
+            this.comboBox2.Location = new System.Drawing.Point(1205, 463);
             this.comboBox2.Margin = new System.Windows.Forms.Padding(6);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(219, 32);
@@ -193,7 +193,7 @@
             // oneDaycheckBox2
             // 
             this.oneDaycheckBox2.AutoSize = true;
-            this.oneDaycheckBox2.Location = new System.Drawing.Point(1480, 386);
+            this.oneDaycheckBox2.Location = new System.Drawing.Point(1433, 386);
             this.oneDaycheckBox2.Name = "oneDaycheckBox2";
             this.oneDaycheckBox2.Size = new System.Drawing.Size(236, 29);
             this.oneDaycheckBox2.TabIndex = 12;
