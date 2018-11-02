@@ -7,8 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
-using MySql;
 
 namespace SNHU_Sched_Landing_Page
 {
@@ -48,25 +46,7 @@ namespace SNHU_Sched_Landing_Page
 
 		private void uploadClass(string time, string classID)
 		{
-				string connectionString = null;
-				MySqlConnection cnn;
-				connectionString = "server=localhost;database=jacobdb;uid=root;pwd=1pl4ym1d;";
-				cnn = new MySqlConnection(connectionString);
-
-				try
-				{
-					cnn.Open();
-					MySqlCommand cmd = new MySqlCommand();
-					cmd.Connection = cnn;
-					cmd.CommandText = $"INSERT INTO timeblock VALUES ('1', '{classID}', '{time}', UUID())";
-					cmd.ExecuteNonQuery();
-
-				}
-				catch (MySqlException ex)
-				{
-				Console.WriteLine(ex);
-				}
-				cnn.Close();
+			MySQLFunctions.SQLCommand($"INSERT INTO timeblock VALUES ('1', '{classID}', '{time}', UUID())");
 		}
     }
 

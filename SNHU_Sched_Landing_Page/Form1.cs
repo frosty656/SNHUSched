@@ -8,8 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
-using MySql.Data.MySqlClient;
-using MySql;
 
 
 namespace SNHU_Sched_Landing_Page
@@ -61,7 +59,7 @@ namespace SNHU_Sched_Landing_Page
         {
 			if (usernameInput.Text != "" && passwordInput.Text != "")
 			{
-				if (GenerateHash(passwordInput.Text, usernameInput.Text) == getPass(usernameInput.Text))
+				if (MySQLFunctions.GenerateHash(passwordInput.Text, usernameInput.Text) == MySQLFunctions.getPass(usernameInput.Text))
 				{
 					LoginHome loginHome = new LoginHome();
 					loginHome.ShowDialog();
@@ -71,8 +69,6 @@ namespace SNHU_Sched_Landing_Page
 					MessageBox.Show("Email and password do not match");
 				}
 			}
-
-
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)
@@ -85,78 +81,6 @@ namespace SNHU_Sched_Landing_Page
             NewAccount1 newAccount = new NewAccount1();
             newAccount.ShowDialog();
         }
-
-		private void SQLCommand(string command)
-		{
-			string connectionString = null;
-			MySqlConnection cnn;
-			connectionString = "server=localhost;database=jacobdb;uid=root;pwd=1pl4ym1d;";
-			cnn = new MySqlConnection(connectionString);
-
-			try
-			{
-				cnn.Open();
-				MySqlCommand cmd = new MySqlCommand();
-				cmd.Connection = cnn;
-				cmd.CommandText = command;
-				cmd.ExecuteNonQuery();
-			}
-			catch (MySqlException ex)
-			{
-				MySqlErrorMessage(ex.Number);
-
-			}
-		}
-
-		private void MySqlErrorMessage(int errorNum)
-		{
-			switch (errorNum)
-			{
-				case 1062:
-					MessageBox.Show("This email or ID is already in use");
-					break;
-				default:
-					MessageBox.Show("There was an unknown error");
-					break;
-			}
-
-		}
-
-		private static string GenerateHash(string value, string salt)
-		{
-			byte[] data = System.Text.Encoding.ASCII.GetBytes(salt + value);
-			data = System.Security.Cryptography.MD5.Create().ComputeHash(data);
-			return Convert.ToBase64String(data);
-		}
-
-		private string getPass(string email)
-		{
-
-			string connectionString = null;
-			MySqlConnection cnn;
-			connectionString = "server=localhost;database=jacobdb;uid=root;pwd=1pl4ym1d;";
-			cnn = new MySqlConnection(connectionString);
-
-			string query = $"SELECT password FROM usertable WHERE email LIKE '{email}';";
-
-			MySqlCommand cmd = new MySqlCommand(query, cnn);
-
-			MySqlDataReader dr;
-
-			cnn.Open();
-			dr = cmd.ExecuteReader();
-
-			string storedPass = string.Empty;
-
-			while (dr.Read())
-			{
-				storedPass = dr.GetString(0);
-				Console.WriteLine(storedPass);
-			}
-			cnn.Close();
-
-			return storedPass;
-		}
 
 		private void DeleteMe_Click(object sender, EventArgs e)
 		{

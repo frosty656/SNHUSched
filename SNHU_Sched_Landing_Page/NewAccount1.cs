@@ -7,8 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
-using MySql;
 
 
 namespace SNHU_Sched_Landing_Page
@@ -30,7 +28,7 @@ namespace SNHU_Sched_Landing_Page
 				string lastName = email.Split('.')[1];
 				lastName = lastName.Split('@')[0];
 
-				NewUser(Int32.Parse(StudentID.Text), firstName, lastName, Email.Text, GenerateHash(Password.Text, Email.Text));
+				NewUser(Int32.Parse(StudentID.Text), firstName, lastName, Email.Text, MySQLFunctions.GenerateHash(Password.Text, Email.Text));
 
 				Schedule_Input scheduleInput = new Schedule_Input();
 				scheduleInput.ShowDialog();
@@ -149,52 +147,8 @@ namespace SNHU_Sched_Landing_Page
 
 		private void NewUser(int uniqueID, string firstName, string lastName, string email, string password)
 		{
-				SQLCommand($"INSERT INTO usertable VALUES ('{uniqueID}', '{firstName}', '{lastName}', '{email}', '{password}')");
+			MySQLFunctions.SQLCommand($"INSERT INTO usertable VALUES ('{uniqueID}', '{firstName}', '{lastName}', '{email}', '{password}')");
 
-		}
-
-		private void SQLCommand(string command)
-		{
-			string connectionString = null;
-			MySqlConnection cnn;
-			connectionString = "server=localhost;database=jacobdb;uid=root;pwd=1pl4ym1d;";
-			cnn = new MySqlConnection(connectionString);
-
-			try
-			{
-				cnn.Open();
-				MySqlCommand cmd = new MySqlCommand();
-				cmd.Connection = cnn;
-					cmd.CommandText = command;
-				cmd.ExecuteNonQuery();
-			}
-			catch (MySqlException ex)
-			{
-				MySqlErrorMessage(ex.Number);
-
-			}
-			cnn.Close();
-		}
-
-		private void MySqlErrorMessage(int errorNum)
-		{
-			switch (errorNum)
-			{
-				case 1062:
-					MessageBox.Show("This email or ID is already in use");
-					break;
-				default:
-					MessageBox.Show("There was an unknown error");
-					break;
-			}
-
-		}
-
-		private static string GenerateHash(string value, string salt)
-		{
-			byte[] data = System.Text.Encoding.ASCII.GetBytes(salt + value);
-			data = System.Security.Cryptography.MD5.Create().ComputeHash(data);
-			return Convert.ToBase64String(data);
 		}
 	}
 }

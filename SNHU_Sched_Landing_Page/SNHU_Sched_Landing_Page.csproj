@@ -63,6 +63,7 @@
     <Compile Include="LoginHome.Designer.cs">
       <DependentUpon>LoginHome.cs</DependentUpon>
     </Compile>
+    <Compile Include="MySQLFunctions.cs" />
     <Compile Include="NewAccount1.cs">
       <SubType>Form</SubType>
     </Compile>
