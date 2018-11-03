@@ -12,11 +12,13 @@ namespace SNHU_Sched_Landing_Page
 	public static class MySQLFunctions
 	{
 
+        const string MYSQLPassword = "password123";
+
 		public static void SQLCommand(string command)
 		{
 			string connectionString = null;
 			MySqlConnection cnn;
-			connectionString = "server=localhost;database=jacobdb;uid=root;pwd=1pl4ym1d;";
+			connectionString = $"server=localhost;database=jacobdb;uid=root;pwd={MYSQLPassword};";
 			cnn = new MySqlConnection(connectionString);
 
 			try
@@ -61,8 +63,8 @@ namespace SNHU_Sched_Landing_Page
 
 			string connectionString = null;
 			MySqlConnection cnn;
-			connectionString = "server=localhost;database=jacobdb;uid=root;pwd=1pl4ym1d;";
-			cnn = new MySqlConnection(connectionString);
+            connectionString = $"server=localhost;database=jacobdb;uid=root;pwd={MYSQLPassword};";
+            cnn = new MySqlConnection(connectionString);
 
 			string query = $"SELECT password FROM usertable WHERE email LIKE '{email}';";
 
