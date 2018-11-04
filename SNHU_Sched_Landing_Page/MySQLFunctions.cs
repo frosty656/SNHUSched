@@ -95,7 +95,6 @@ namespace SNHU_Sched_Landing_Page
         public static void getInfo(string searchCommand, ref string[] array)
         {
 
-            int arrayInt = 0;
             string connectionString = null;
             MySqlConnection cnn;
             connectionString = $"server=localhost;database=jacobdb;uid=root;pwd={MYSQLPassword};";
@@ -110,23 +109,50 @@ namespace SNHU_Sched_Landing_Page
             cnn.Open();
             dr = cmd.ExecuteReader();
 
-            string storedPass = string.Empty;
 
-            try
+            int tracker = 0;
+
+            while (dr.Read())
             {
-                while (dr.Read())
-                {
-                    array[arrayInt] = dr.GetString(0);
-                    arrayInt++;
-                }
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
+                array[tracker] = dr.GetString(0);
+                tracker++;
             }
 
             dr.Close();
             cnn.Close();
+
+        }
+
+        public static int getUserIDFromEmail(string email)
+        {
+            string connectionString = null;
+            MySqlConnection cnn;
+            connectionString = $"server=localhost;database=jacobdb;uid=root;pwd={MYSQLPassword};";
+            cnn = new MySqlConnection(connectionString);
+
+            string query = $"SELECT userID FROM usertable WHERE email LIKE '{email}';";
+
+            MySqlCommand cmd = new MySqlCommand(query, cnn);
+
+            MySqlDataReader dr;
+
+            cnn.Open();
+            dr = cmd.ExecuteReader();
+
+            string userID = string.Empty;
+
+
+            while (dr.Read())
+            {
+                userID = dr.GetString(0);
+                Console.WriteLine(userID);
+            }
+
+            dr.Close();
+            cnn.Close();
+
+
+            return Convert.ToInt32(userID);
         }
 
 	}

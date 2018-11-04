@@ -36,9 +36,6 @@ namespace SNHU_Sched_Landing_Page
                 Schedule_Input scheduleInput = new Schedule_Input();
 				scheduleInput.ShowDialog();
 			}
-
-
-
         }
 
         private void Email_TextChanged(object sender, EventArgs e)
