@@ -42,11 +42,14 @@ namespace SNHU_Sched_Landing_Page
 		{
 			uploadClass(classStartTime, ClassID.Text);
 
-		}
+            LoginHome loginHome = new LoginHome();
+            loginHome.ShowDialog();
+
+        }
 
 		private void uploadClass(string time, string classID)
 		{
-			MySQLFunctions.SQLCommand($"INSERT INTO timeblock VALUES ('1', '{classID}', '{time}', UUID())");
+			MySQLFunctions.SQLCommand($"INSERT INTO timeblock VALUES ({userInfo.getCurrentUser()}, '{classID}', '{time}', UUID())");
 		}
     }
 

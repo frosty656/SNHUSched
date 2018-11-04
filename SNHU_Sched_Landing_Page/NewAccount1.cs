@@ -30,7 +30,10 @@ namespace SNHU_Sched_Landing_Page
 
 				NewUser(Int32.Parse(StudentID.Text), firstName, lastName, Email.Text, MySQLFunctions.GenerateHash(Password.Text, Email.Text));
 
-				Schedule_Input scheduleInput = new Schedule_Input();
+
+                userInfo.setCurrentUser(Int32.Parse(StudentID.Text));
+
+                Schedule_Input scheduleInput = new Schedule_Input();
 				scheduleInput.ShowDialog();
 			}
 
