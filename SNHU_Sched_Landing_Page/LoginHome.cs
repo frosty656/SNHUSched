@@ -47,7 +47,8 @@ namespace SNHU_Sched_Landing_Page
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            ComparisonPage comparisonPage = new ComparisonPage();
+            comparisonPage.ShowDialog();
         }
     }
 }

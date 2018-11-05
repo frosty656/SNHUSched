@@ -37,9 +37,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(163, 46);
+            this.label2.Location = new System.Drawing.Point(299, 85);
+            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 25);
+            this.label2.Size = new System.Drawing.Size(170, 42);
             this.label2.TabIndex = 1;
             this.label2.Text = "Classes:";
             // 
@@ -47,31 +48,34 @@
             // 
             this.ClassListLabel.AutoSize = true;
             this.ClassListLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ClassListLabel.Location = new System.Drawing.Point(290, 47);
+            this.ClassListLabel.Location = new System.Drawing.Point(532, 87);
+            this.ClassListLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.ClassListLabel.Name = "ClassListLabel";
-            this.ClassListLabel.Size = new System.Drawing.Size(166, 24);
+            this.ClassListLabel.Size = new System.Drawing.Size(298, 39);
             this.ClassListLabel.TabIndex = 2;
             this.ClassListLabel.Text = "No current classes";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(626, 47);
+            this.button1.Location = new System.Drawing.Point(1148, 87);
+            this.button1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(138, 42);
             this.button1.TabIndex = 3;
-            this.button1.Text = "button1";
+            this.button1.Text = "Comparisons";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // LoginHome
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1467, 831);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.ClassListLabel);
             this.Controls.Add(this.label2);
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "LoginHome";
             this.Text = "LoginHome";
             this.Load += new System.EventHandler(this.LoginHome_Load);
