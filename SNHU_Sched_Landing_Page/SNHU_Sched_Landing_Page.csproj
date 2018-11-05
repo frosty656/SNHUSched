@@ -51,6 +51,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ComparisonPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComparisonPage.Designer.cs">
+      <DependentUpon>ComparisonPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="userInfo.cs" />
     <Compile Include="Welcome Page.cs">
       <SubType>Form</SubType>
@@ -79,6 +85,9 @@
     <Compile Include="Schedule Input.Designer.cs">
       <DependentUpon>Schedule Input.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ComparisonPage.resx">
+      <DependentUpon>ComparisonPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Welcome Page.resx">
       <DependentUpon>Welcome Page.cs</DependentUpon>
     </EmbeddedResource>
