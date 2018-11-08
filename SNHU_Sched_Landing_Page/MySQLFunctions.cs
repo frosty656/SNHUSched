@@ -112,7 +112,7 @@ namespace SNHU_Sched_Landing_Page
 
             int tracker = 0;
 
-            while (dr.Read())
+            while (dr.Read() && tracker < array.Length)
             {
                 array[tracker] = dr.GetString(0);
                 tracker++;
