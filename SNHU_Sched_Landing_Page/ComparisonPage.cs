@@ -16,7 +16,7 @@ namespace SNHU_Sched_Landing_Page
     {
         string[] friendArray = new string[200];
         
-        private class Student
+        public class Student
         {
             public Student() { }
 
@@ -29,48 +29,21 @@ namespace SNHU_Sched_Landing_Page
         {
             InitializeComponent();
 
-            MySQLFunctions.getInfo($"SELECT friendID FROM friendtable WHERE userID = {userInfo.getCurrentUser()};", ref friendArray);
 
             var friendList = new List<Student>();
+			var friendIDs = new List<string>();
 
-            for (int i = 0; i < friendArray.Length; i++)
-            {
-                if (friendArray[i] == null) { break; }
+			MySQLFunctions.getInfo($"SELECT friendID FROM friendtable WHERE userID = {userInfo.getCurrentUser()};", ref friendArray);
 
-                string connectionString = null;
-                MySqlConnection cnn;
-                connectionString = $"server=localhost;database=jacobdb;uid=root;pwd={MySQLFunctions.MYSQLPassword};";
-                cnn = new MySqlConnection(connectionString);
+			for(int i = 0; i < friendArray.Length; i++)
+			{
+				if (friendArray[i] == null) { break; }
 
-                string query = $"SELECT userID, firstname, lastname, email FROM usertable WHERE userID = {friendArray[i]};";
+				MySQLFunctions.getListInfo($"SELECT userID, firstname, lastname, email FROM usertable WHERE userID = {friendArray[i]};", ref friendList);
 
-                MySqlCommand cmd = new MySqlCommand(query, cnn);
+			}
 
-                MySqlDataReader dr;
-
-                cnn.Open();
-                dr = cmd.ExecuteReader();
-
-                while (dr.Read())
-                {
-                    var userID = dr["userID"];
-                    var firstname = dr["firstname"];
-                    var lastname = dr["lastname"];
-                    var email = dr["email"];
-
-                    friendList.Add(new Student() { StudentID = userID.ToString(), firstName = firstname.ToString(), lastName = lastname.ToString() });
-                }
-
-                dr.Close();
-                cnn.Close();
-            }
-
-
-
-
- 
-
-            foreach (var t in friendList)
+			foreach (var t in friendList)
             {
                 Button button = new Button();
                 button.Name = t.StudentID;

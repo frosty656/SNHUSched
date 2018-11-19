@@ -11,7 +11,7 @@ namespace SNHU_Sched_Landing_Page
 {
 	public static class MySQLFunctions
     {
-        public const string MYSQLPassword = "beach02";
+        public const string MYSQLPassword = "*/x-y7UG_cq&";
 
 		public static void SQLCommand(string command)
 		{
@@ -157,7 +157,36 @@ namespace SNHU_Sched_Landing_Page
             return Convert.ToInt32(userID);
         }
 
-        
+		public static void getListInfo(string searchCommand, ref List<ComparisonPage.Student> list)
+		{
 
-    }
+			string connectionString = null;
+			MySqlConnection cnn;
+			connectionString = $"server=localhost;database=jacobdb;uid=root;pwd={MYSQLPassword};";
+			cnn = new MySqlConnection(connectionString);
+
+			string query = searchCommand;
+
+			MySqlCommand cmd = new MySqlCommand(query, cnn);
+
+			MySqlDataReader dr;
+
+			cnn.Open();
+			dr = cmd.ExecuteReader();
+
+			while (dr.Read())
+			{
+				var userID = dr["userID"];
+				var firstname = dr["firstname"];
+				var lastname = dr["lastname"];
+				var email = dr["email"];
+				list.Add(new ComparisonPage.Student() { StudentID = userID.ToString(), firstName = firstname.ToString(), lastName = lastname.ToString() });
+			}
+
+			dr.Close();
+			cnn.Close();
+
+		}
+
+	}
 }
