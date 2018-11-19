@@ -34,7 +34,9 @@ namespace SNHU_Sched_Landing_Page
 
 				MySqlErrorMessage(ex.Number);
 
-			}
+                throw new System.ArgumentException("testing");
+
+            }
 			cnn.Close();
 		}
 
@@ -155,5 +157,5 @@ namespace SNHU_Sched_Landing_Page
             return Convert.ToInt32(userID);
         }
 
-	}
+    }
 }

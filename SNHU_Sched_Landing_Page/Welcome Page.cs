@@ -85,8 +85,8 @@ namespace SNHU_Sched_Landing_Page
 
 		private void DeleteMe_Click(object sender, EventArgs e)
 		{
-			Schedule_Input scheduleInput = new Schedule_Input();
-			scheduleInput.ShowDialog();
+			//AddFriends scheduleInput = new AddFriends();
+			//scheduleInput.ShowDialog();
 		}
 	}
 }

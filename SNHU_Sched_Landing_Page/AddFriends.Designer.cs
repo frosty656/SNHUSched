@@ -36,7 +36,7 @@
             this.resultsBox = new System.Windows.Forms.GroupBox();
             this.resultsPanel = new System.Windows.Forms.Panel();
             this.emailLabel = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.emailSearch = new System.Windows.Forms.TextBox();
             this.searchButton = new System.Windows.Forms.Button();
             this.resultsBox.SuspendLayout();
             this.SuspendLayout();
@@ -112,12 +112,12 @@
             this.emailLabel.TabIndex = 59;
             this.emailLabel.Text = "Email:";
             // 
-            // textBox2
+            // emailSearch
             // 
-            this.textBox2.Location = new System.Drawing.Point(489, 79);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 58;
+            this.emailSearch.Location = new System.Drawing.Point(489, 79);
+            this.emailSearch.Name = "emailSearch";
+            this.emailSearch.Size = new System.Drawing.Size(100, 20);
+            this.emailSearch.TabIndex = 58;
             // 
             // searchButton
             // 
@@ -137,7 +137,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.searchButton);
             this.Controls.Add(this.emailLabel);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.emailSearch);
             this.Controls.Add(this.resultsBox);
             this.Controls.Add(this.lastLabel);
             this.Controls.Add(this.firstlabel);
@@ -162,7 +162,7 @@
         private System.Windows.Forms.GroupBox resultsBox;
         private System.Windows.Forms.Panel resultsPanel;
         private System.Windows.Forms.Label emailLabel;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox emailSearch;
         private System.Windows.Forms.Button searchButton;
     }
 }
