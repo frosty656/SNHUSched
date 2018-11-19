@@ -7,16 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
+using MySql;
 
 namespace SNHU_Sched_Landing_Page
 {
     public partial class ComparisonPage : Form
     {
-
-        string[] studentIDs = new string[200];
-        string[] firstNames = new string[200];
-        string[] lastNames = new string[200];
-        string[] friendsList = new string[200];
+        string[] friendArray = new string[200];
         
         private class Student
         {
@@ -31,25 +29,48 @@ namespace SNHU_Sched_Landing_Page
         {
             InitializeComponent();
 
-            MySQLFunctions.getInfo($"SELECT friendID FROM friendtable WHERE userID = {userInfo.getCurrentUser()};", ref friendsList);
+            MySQLFunctions.getInfo($"SELECT friendID FROM friendtable WHERE userID = {userInfo.getCurrentUser()};", ref friendArray);
 
-            for (int i = 0; i < friendsList.Length; i++)
+            var friendList = new List<Student>();
+
+            for (int i = 0; i < friendArray.Length; i++)
             {
-                if (friendsList[i] == null) { break; }
-                getPersonInfo(friendsList[i]);
+                if (friendArray[i] == null) { break; }
+
+                string connectionString = null;
+                MySqlConnection cnn;
+                connectionString = $"server=localhost;database=jacobdb;uid=root;pwd={MySQLFunctions.MYSQLPassword};";
+                cnn = new MySqlConnection(connectionString);
+
+                string query = $"SELECT userID, firstname, lastname, email FROM usertable WHERE userID = {friendArray[i]};";
+
+                MySqlCommand cmd = new MySqlCommand(query, cnn);
+
+                MySqlDataReader dr;
+
+                cnn.Open();
+                dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    var userID = dr["userID"];
+                    var firstname = dr["firstname"];
+                    var lastname = dr["lastname"];
+                    var email = dr["email"];
+
+                    friendList.Add(new Student() { StudentID = userID.ToString(), firstName = firstname.ToString(), lastName = lastname.ToString() });
+                }
+
+                dr.Close();
+                cnn.Close();
             }
 
-            var studentList = new List<Student>();
 
-            for (int i = 0; i < studentIDs.Length; i++)
-            {
-                if (studentIDs[i] == null) { MessageBox.Show("BREAKING"); break; }
-                studentList.Add(new Student() { StudentID = studentIDs[i], firstName = firstNames[i], lastName = lastNames[i] });
-            }
+
 
  
 
-            foreach (var t in studentList)
+            foreach (var t in friendList)
             {
                 Button button = new Button();
                 button.Name = t.StudentID;
@@ -77,13 +98,5 @@ namespace SNHU_Sched_Landing_Page
             addfreinds.ShowDialog();
         }
 
-        void getPersonInfo(string friendID)
-
-        { 
-            MySQLFunctions.getInfo($"SELECT userID FROM usertable WHERE userID = {friendID};", ref studentIDs);
-            MySQLFunctions.getInfo($"SELECT firstname FROM usertable WHERE userID = {friendID};", ref firstNames);
-            MySQLFunctions.getInfo($"SELECT lastname FROM usertable WHERE userID = {friendID};", ref lastNames);
-
-        }
     }
 }
