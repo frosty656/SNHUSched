@@ -113,17 +113,17 @@ namespace SNHU_Sched_Landing_Page
                 //Show names
                 Label lbl = new Label();
                 lbl.Text = p.firstName + " " + p.lastName;
-                lbl.Location = new Point(200, j * 25); //here is the location of the box
-                lbl.Size = new Size(600,30);//here is the size of the box
+                lbl.Location = new Point(400, j * 25); //here is the location of the box
+                lbl.Size = new Size(400,30);//here is the size of the box
                 lbl.TextAlign = ContentAlignment.MiddleCenter;
                 resultsPanel.Controls.Add(lbl);
 
                 //Show emails
                 Label lbl2 = new Label();
                 lbl2.Text = p.email;
-                lbl2.Location = new Point(100, j * 25); //here is the location of the box
-                lbl.Size = new Size(600, 30); //here is the size of the box
-                lbl.TextAlign = ContentAlignment.MiddleCenter;
+                lbl2.Location = new Point(50, j * 25); //here is the location of the box
+                lbl2.Size = new Size(400, 30); //here is the size of the box
+                lbl2.TextAlign = ContentAlignment.MiddleCenter;
                 resultsPanel.Controls.Add(lbl2);
                 j++;
             }
