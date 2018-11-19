@@ -11,7 +11,7 @@ namespace SNHU_Sched_Landing_Page
 {
 	public static class MySQLFunctions
     {
-        const string MYSQLPassword = "beach02";
+        public const string MYSQLPassword = "beach02";
 
 		public static void SQLCommand(string command)
 		{
@@ -156,6 +156,8 @@ namespace SNHU_Sched_Landing_Page
 
             return Convert.ToInt32(userID);
         }
+
+        
 
     }
 }

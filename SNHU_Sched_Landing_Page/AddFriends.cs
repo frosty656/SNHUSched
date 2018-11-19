@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
+using MySql;
 
 namespace SNHU_Sched_Landing_Page
 {
@@ -25,9 +27,6 @@ namespace SNHU_Sched_Landing_Page
 
 
         string[] studentIDs = new string[200];
-        string[] firstNames = new string[200];
-        string[] lastNames = new string[200];
-        string[] emails = new string[200];
 
         private class Student
         {
@@ -52,15 +51,35 @@ namespace SNHU_Sched_Landing_Page
             for (int i = 0; i < studentIDs.Length; i++)
             {
                 if (studentIDs[i] == null) { break; }
-                getInfo(studentIDs[i]);
+
+                string connectionString = null;
+                MySqlConnection cnn;
+                connectionString = $"server=localhost;database=jacobdb;uid=root;pwd={MySQLFunctions.MYSQLPassword};";
+                cnn = new MySqlConnection(connectionString);
+
+                string query = $"SELECT userID, firstname, lastname, email FROM usertable WHERE userID = {studentIDs[i]};";
+
+                MySqlCommand cmd = new MySqlCommand(query, cnn);
+
+                MySqlDataReader dr;
+
+                cnn.Open();
+                dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    var userID = dr["userID"];
+                    var firstname = dr["firstname"];
+                    var lastname = dr["lastname"];
+                    var email = dr["email"];
+
+                    studentList.Add(new Student() { StudentID = userID.ToString(), firstName = firstname.ToString(), lastName = lastname.ToString(), email = email.ToString() });
+                }
+
+                dr.Close();
+                cnn.Close();
             }
-    
-            //Make the list
-            for (int i = 0; i < studentIDs.Length; i++)
-            {
-                if (studentIDs[i] == null) { break; }
-                studentList.Add(new Student() { StudentID = studentIDs[i], firstName = firstNames[i], lastName = lastNames[i], email = emails[i] });
-            }
+
 
             //Filter the list
             if (firstnameSearch.Text != "")
@@ -95,7 +114,7 @@ namespace SNHU_Sched_Landing_Page
                 Label lbl = new Label();
                 lbl.Text = p.firstName + " " + p.lastName;
                 lbl.Location = new Point(200, j * 25); //here is the location of the box
-                lbl.Size = new Size(100,30);//here is the size of the box
+                lbl.Size = new Size(600,30);//here is the size of the box
                 lbl.TextAlign = ContentAlignment.MiddleCenter;
                 resultsPanel.Controls.Add(lbl);
 
@@ -103,21 +122,12 @@ namespace SNHU_Sched_Landing_Page
                 Label lbl2 = new Label();
                 lbl2.Text = p.email;
                 lbl2.Location = new Point(100, j * 25); //here is the location of the box
-                lbl.Size = new Size(100, 30); //here is the size of the box
+                lbl.Size = new Size(600, 30); //here is the size of the box
                 lbl.TextAlign = ContentAlignment.MiddleCenter;
                 resultsPanel.Controls.Add(lbl2);
                 j++;
             }
            
-        }
-
-        void getInfo(string friendID)
-        {
-
-            MySQLFunctions.getInfo($"SELECT userID FROM usertable WHERE userID = {friendID};", ref studentIDs);
-            MySQLFunctions.getInfo($"SELECT firstname FROM usertable WHERE userID = {friendID};", ref firstNames);
-            MySQLFunctions.getInfo($"SELECT lastname FROM usertable WHERE userID = {friendID};", ref lastNames);
-
         }
 
         void MyButtonHandler(object sender, EventArgs e)
