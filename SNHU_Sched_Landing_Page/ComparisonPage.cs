@@ -13,9 +13,7 @@ using MySql;
 namespace SNHU_Sched_Landing_Page
 {
     public partial class ComparisonPage : Form
-    {
-        string[] friendArray = new string[200];
-        
+    {   
         public class Student
         {
             public Student() { }
@@ -33,13 +31,11 @@ namespace SNHU_Sched_Landing_Page
             var friendList = new List<Student>();
 			var friendIDs = new List<string>();
 
-			MySQLFunctions.getInfo($"SELECT friendID FROM friendtable WHERE userID = {userInfo.getCurrentUser()};", ref friendArray);
+			MySQLFunctions.getInfo($"SELECT friendID FROM friendtable WHERE userID = {userInfo.getCurrentUser()};", ref friendIDs);
 
-			for(int i = 0; i < friendArray.Length; i++)
+			foreach(var p in friendIDs)
 			{
-				if (friendArray[i] == null) { break; }
-
-				MySQLFunctions.getListInfo($"SELECT userID, firstname, lastname, email FROM usertable WHERE userID = {friendArray[i]};", ref friendList);
+				MySQLFunctions.getListInfo($"SELECT userID, firstname, lastname, email FROM usertable WHERE userID = {p};", ref friendList);
 
 			}
 

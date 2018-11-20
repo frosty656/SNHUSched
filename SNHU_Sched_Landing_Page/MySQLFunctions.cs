@@ -11,7 +11,7 @@ namespace SNHU_Sched_Landing_Page
 {
 	public static class MySQLFunctions
     {
-        public const string MYSQLPassword = "*/x-y7UG_cq&";
+        public const string MYSQLPassword = "beach02";
 
 		public static void SQLCommand(string command)
 		{
@@ -94,7 +94,7 @@ namespace SNHU_Sched_Landing_Page
 			return storedPass;
 		}
 
-        public static void getInfo(string searchCommand, ref string[] array)
+        public static void getInfo(string searchCommand, ref List<string> list)
         {
 
             string connectionString = null;
@@ -111,13 +111,9 @@ namespace SNHU_Sched_Landing_Page
             cnn.Open();
             dr = cmd.ExecuteReader();
 
-
-            int tracker = 0;
-
-            while (dr.Read() && tracker < array.Length)
+            while (dr.Read())
             {
-                array[tracker] = dr.GetString(0);
-                tracker++;
+                list.Add(dr.GetString(0));
             }
 
             dr.Close();

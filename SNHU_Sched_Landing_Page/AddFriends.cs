@@ -25,9 +25,6 @@ namespace SNHU_Sched_Landing_Page
         // MAKE EVERYTHING USE LISTS ARRAYS ARE OVERWRITING EACHOTHER
         //
 
-
-        string[] studentIDs = new string[200];
-
         private class Student
         {
             public Student() { }
@@ -43,21 +40,21 @@ namespace SNHU_Sched_Landing_Page
             resultsPanel.Controls.Clear();
             var studentList = new List<Student>();
 
+            var studentIDs = new List<string>();
+
             studentList.Clear();
 
 
             MySQLFunctions.getInfo("SELECT userID FROM usertable;", ref studentIDs);
 
-            for (int i = 0; i < studentIDs.Length; i++)
+            foreach( var p in studentIDs)
             {
-                if (studentIDs[i] == null) { break; }
-
                 string connectionString = null;
                 MySqlConnection cnn;
                 connectionString = $"server=localhost;database=jacobdb;uid=root;pwd={MySQLFunctions.MYSQLPassword};";
                 cnn = new MySqlConnection(connectionString);
 
-                string query = $"SELECT userID, firstname, lastname, email FROM usertable WHERE userID = {studentIDs[i]};";
+                string query = $"SELECT userID, firstname, lastname, email FROM usertable WHERE userID = {p};";
 
                 MySqlCommand cmd = new MySqlCommand(query, cnn);
 
@@ -157,7 +154,7 @@ namespace SNHU_Sched_Landing_Page
 
         private bool DuplicateFriends(string userID, string friendID)
         {
-            string[] test = new string[10];
+            var test = new List<string>();
 
             MySQLFunctions.getInfo($"SELECT * FROM friendtable WHERE userID = {userID} AND friendID = {friendID}", ref test);
 

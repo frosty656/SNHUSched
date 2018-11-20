@@ -30,16 +30,18 @@ namespace SNHU_Sched_Landing_Page
 
         private void LoginHome_Load(object sender, EventArgs e)
         {
-            string[] classList = new string[20];
+            //string[] classList = new string[20];
             string classesString = "";
+
+            var classList = new List<string>();
 
             MySQLFunctions.getInfo($"SELECT classID FROM timeblock WHERE userID LIKE {userInfo.getCurrentUser()};", ref classList);
 
-
-            for (int i = 0; i < classList.Length; i++)
+            foreach (var p in classList)
             {
-                classesString += classList[i] + "\n";
+                classesString += p + "\n";
             }
+
 
             ClassListLabel.Text = classesString;
 
