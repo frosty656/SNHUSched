@@ -163,7 +163,7 @@ namespace SNHU_Sched_Landing_Page
                 MessageBox.Show("You cannot be friends with yourself");
                 return false;
             }
-            if (test[0] == null)
+            if (test.Count == 0)
             {
                 return true;
             }

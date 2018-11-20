@@ -37,6 +37,8 @@ namespace SNHU_Sched_Landing_Page
 
             MySQLFunctions.getInfo($"SELECT classID FROM timeblock WHERE userID LIKE {userInfo.getCurrentUser()};", ref classList);
 
+            classList = classList.Distinct().ToList();
+
             foreach (var p in classList)
             {
                 classesString += p + "\n";

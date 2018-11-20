@@ -153,7 +153,7 @@ namespace SNHU_Sched_Landing_Page
             return Convert.ToInt32(userID);
         }
 
-		public static void getListInfo(string searchCommand, ref List<ComparisonPage.Student> list)
+		public static void getFriendInfo(string searchCommand, ref List<ComparisonPage.Student> list)
 		{
 
 			string connectionString = null;
@@ -183,6 +183,33 @@ namespace SNHU_Sched_Landing_Page
 			cnn.Close();
 
 		}
+        public static void getTimeInfo(string searchCommand, ref List<ComparisonPage.timeBlock> list)
+        {
 
-	}
+            string connectionString = null;
+            MySqlConnection cnn;
+            connectionString = $"server=localhost;database=jacobdb;uid=root;pwd={MYSQLPassword};";
+            cnn = new MySqlConnection(connectionString);
+
+            string query = searchCommand;
+
+            MySqlCommand cmd = new MySqlCommand(query, cnn);
+
+            MySqlDataReader dr;
+
+            cnn.Open();
+            dr = cmd.ExecuteReader();
+
+            while (dr.Read())
+            {
+                var time = dr["startTime"];
+                var day = dr["day"];
+                list.Add(new ComparisonPage.timeBlock() { startTime = time.ToString(), day = day.ToString()});
+            }
+
+            dr.Close();
+            cnn.Close();
+
+        }
+    }
 }
