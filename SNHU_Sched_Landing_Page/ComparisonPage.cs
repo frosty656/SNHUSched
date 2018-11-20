@@ -70,16 +70,16 @@ namespace SNHU_Sched_Landing_Page
                 button.Click += (s, e) => 
                 {
 					//Changes color of buttons to show election
-					if (friendPanel.Controls[t.StudentID].BackColor == friendNOTSelected)
+					if (button.BackColor == friendNOTSelected)
 					{
 
 						selectedFriendList.Add(t.StudentID.ToString());
-						friendPanel.Controls[t.StudentID].BackColor = friendSelected;
+						button.BackColor = friendSelected;
 					}
 					else
 					{
 						selectedFriendList.Remove(t.StudentID.ToString());
-						friendPanel.Controls[t.StudentID].BackColor = friendNOTSelected;
+						button.BackColor = friendNOTSelected;
 					}
 					showOverlap(ref timeBlocks, ref selectedFriendList);
                     
