@@ -41,7 +41,7 @@ namespace SNHU_Sched_Landing_Page
 
             var color = Color.Red;
 			var friendNOTSelected = Color.White;
-			var friendSelected = Color.AliceBlue;
+			var friendSelected = Color.LawnGreen;
 
 
             var friendList = new List<Student>(); //List of all the users friends
@@ -66,23 +66,20 @@ namespace SNHU_Sched_Landing_Page
                 button.Location = new Point(10, friendPanel.Controls.Count * 25);
                 button.Size = new Size(120,25);
                 button.Font = new Font(button.Font.FontFamily, 12);
-				button.BackColor = Color.White;
+				button.BackColor = friendNOTSelected;
                 button.Click += (s, e) => 
                 {
 					//Changes color of buttons to show election
-					if (button.BackColor == Color.White)
+					if (friendPanel.Controls[t.StudentID].BackColor == friendNOTSelected)
 					{
 
 						selectedFriendList.Add(t.StudentID.ToString());
-						button.BackColor = Color.AliceBlue;
+						friendPanel.Controls[t.StudentID].BackColor = friendSelected;
 					}
 					else
 					{
-
-
 						selectedFriendList.Remove(t.StudentID.ToString());
-
-						button.BackColor = Color.White;
+						friendPanel.Controls[t.StudentID].BackColor = friendNOTSelected;
 					}
 					showOverlap(ref timeBlocks, ref selectedFriendList);
                     
@@ -110,7 +107,6 @@ namespace SNHU_Sched_Landing_Page
 			{
 				if (s.Name[3] == '1' || s.Name[3] == '2' || s.Name[3] == '3' || s.Name[3] == '4' || s.Name[3] == '5' || s.Name[3] == '6' || s.Name[3] == '7' || s.Name[3] == '8')
 				{
-					//MessageBox.Show("running");
 					s.BackColor = Color.White;
 				}
 			}
