@@ -37,7 +37,7 @@ namespace SNHU_Sched_Landing_Page
 			ClassID.Text = "";
             firstDay.Text = "";
             secondDay.Text = "";
-			ClassStartTime.SelectedIndex = -1;
+			ClassStartTime.Text = "";
 		}
 
         private void firstDay_SelectedIndexChanged(object sender, EventArgs e)
