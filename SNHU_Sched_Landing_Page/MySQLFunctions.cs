@@ -211,5 +211,68 @@ namespace SNHU_Sched_Landing_Page
             cnn.Close();
 
         }
-    }
+		public static void getClassInfo(string searchCommand, ref List<Schedule_Input2.timeBlock> list)
+		{
+
+			string connectionString = null;
+			MySqlConnection cnn;
+			connectionString = $"server=localhost;database=jacobdb;uid=root;pwd={MYSQLPassword};";
+			cnn = new MySqlConnection(connectionString);
+
+			string query = searchCommand;
+
+			MySqlCommand cmd = new MySqlCommand(query, cnn);
+
+			MySqlDataReader dr;
+
+			cnn.Open();
+			dr = cmd.ExecuteReader();
+
+			while (dr.Read())
+			{
+				var time = dr["startTime"];
+				var day = dr["day"];
+				list.Add(new Schedule_Input2.timeBlock() { startTime = time.ToString(), day = day.ToString() });
+			}
+
+			dr.Close();
+			cnn.Close();
+
+		}
+		public static void getDetailedClassInfo(string searchCommand, ref List<LoginHome.classInfo> list)
+		{
+
+			string connectionString = null;
+			MySqlConnection cnn;
+			connectionString = $"server=localhost;database=jacobdb;uid=root;pwd={MYSQLPassword};";
+			cnn = new MySqlConnection(connectionString);
+
+			string query = searchCommand;
+
+			MySqlCommand cmd = new MySqlCommand(query, cnn);
+
+			MySqlDataReader dr;
+
+			cnn.Open();
+			dr = cmd.ExecuteReader();
+
+			while (dr.Read())
+			{
+				var time = dr["startTime"];
+				var day = dr["day"];
+				var prof = dr["professor"];
+				var room = dr["roomnumber"];
+				var buildingChoice = dr["building"];
+				var className = dr["classID"];
+				list.Add(new LoginHome.classInfo() { startTime = time.ToString(), day = day.ToString(), building = buildingChoice.ToString(),
+					classID = className.ToString(),
+					professor = prof.ToString(), roomNumber = room.ToString() });
+			}
+
+			dr.Close();
+			cnn.Close();
+
+		}
+
+	}
 }

@@ -30,7 +30,7 @@ namespace SNHU_Sched_Landing_Page
             public string day { get; set; }
         }
 
-        public ComparisonPage()
+		public ComparisonPage()
         {
             InitializeComponent();
 
@@ -105,7 +105,8 @@ namespace SNHU_Sched_Landing_Page
 		{
 			foreach (Label s in this.Controls.OfType<Label>())
 			{
-				if (s.Name[3] == '1' || s.Name[3] == '2' || s.Name[3] == '3' || s.Name[3] == '4' || s.Name[3] == '5' || s.Name[3] == '6' || s.Name[3] == '7' || s.Name[3] == '8')
+				if (s.Name[3] == '1' || s.Name[3] == '2' || s.Name[3] == '3' || s.Name[3] == '4' || s.Name[3] == '5' 
+					|| s.Name[3] == '6' || s.Name[3] == '7' || s.Name[3] == '8')
 				{
 					s.BackColor = Color.White;
 				}
@@ -178,7 +179,12 @@ namespace SNHU_Sched_Landing_Page
 			}
 		}
 
-    }
+		private void button1_Click(object sender, EventArgs e)
+		{
+			Schedule_Input2 addfreinds = new Schedule_Input2();
+			addfreinds.ShowDialog();
+		}
+	}
 }
 
 

@@ -82,11 +82,5 @@ namespace SNHU_Sched_Landing_Page
             NewAccount1 newAccount = new NewAccount1();
             newAccount.ShowDialog();
         }
-
-		private void DeleteMe_Click(object sender, EventArgs e)
-		{
-			//AddFriends scheduleInput = new AddFriends();
-			//scheduleInput.ShowDialog();
-		}
 	}
 }

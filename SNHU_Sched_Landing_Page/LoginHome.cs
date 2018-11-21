@@ -27,25 +27,104 @@ namespace SNHU_Sched_Landing_Page
 			return "end";
 		}
 
+		public class classInfo
+		{
+			public classInfo() { }
+			public string startTime { get; set; }
+			public string day { get; set; }
+			public string classID { get; set; }
+			public string professor { get; set; }
+			public string building { get; set; }
+			public string roomNumber { get; set; }
+		}
 
-        private void LoginHome_Load(object sender, EventArgs e)
+
+		private void LoginHome_Load(object sender, EventArgs e)
         {
-            //string[] classList = new string[20];
-            string classesString = "";
 
-            var classList = new List<string>();
+            var classList = new List<classInfo>();
 
-            MySQLFunctions.getInfo($"SELECT classID FROM timeblock WHERE userID LIKE {userInfo.getCurrentUser()};", ref classList);
+            MySQLFunctions.getDetailedClassInfo($"SELECT classID, startTime, day, building, roomnumber, professor FROM timeblock WHERE userID LIKE " +
+				$"{userInfo.getCurrentUser()};", ref classList);
 
             classList = classList.Distinct().ToList();
 
-            foreach (var p in classList)
-            {
-                classesString += p + "\n";
-            }
+			foreach (var t in classList)
+			{
+				Button button = new Button();
+				button.Name = t.classID;
+				button.Text = t.classID ;
+				button.Location = new Point(10, friendPanel.Controls.Count * 25);
+				button.Size = new Size(120, 25);
+				button.Font = new Font(button.Font.FontFamily, 12);
+				button.Click += (s, z) =>
+				{
+					classnameLabel.Text = t.classID + " Details:";
+					profLabel.Text = "Professor: " + t.professor;
+					buildingLabel.Text = "Building: " + t.building;
+					roomLabel.Text = "Room: " + t.roomNumber;
 
+				};
+				friendPanel.Controls.Add(button);
 
-            ClassListLabel.Text = classesString;
+				string day = "", time = "", combined = "";
+				switch (t.day)
+				{
+					case "Monday":
+						day = "mon";
+						break;
+					case "Tuesday":
+						day = "tue";
+						break;
+					case "Wednesday":
+						day = "wed";
+						break;
+					case "Thursday":
+						day = "thu";
+						break;
+					case "Friday":
+						day = "fri";
+						break;
+				}
+				switch (t.startTime)
+				{
+					case "8:00am":
+						time = "1";
+						break;
+					case "9:30am":
+						time = "2";
+						break;
+					case "11:00am":
+						time = "3";
+						break;
+					case "12:30pm":
+						time = "4";
+						break;
+					case "2:00pm":
+						time = "5";
+						break;
+					case "3:30pm":
+						time = "6";
+						break;
+					case "5:00pm":
+						time = "7";
+						break;
+					case "6:30pm":
+						time = "8";
+						break;
+				}
+
+				combined = day + time;
+
+				try
+				{
+					this.Controls[combined].BackColor = Color.OrangeRed;
+				}
+				catch (ArgumentException k)
+				{
+					MessageBox.Show(k.Message);
+				}
+			}
 
         }
 

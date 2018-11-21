@@ -85,6 +85,7 @@
 			this.friendBox = new System.Windows.Forms.GroupBox();
 			this.friendPanel = new System.Windows.Forms.Panel();
 			this.addFriendButton = new System.Windows.Forms.Button();
+			this.button1 = new System.Windows.Forms.Button();
 			this.friendBox.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -777,12 +778,23 @@
 			this.addFriendButton.UseVisualStyleBackColor = true;
 			this.addFriendButton.Click += new System.EventHandler(this.addFriendButton_Click);
 			// 
+			// button1
+			// 
+			this.button1.Location = new System.Drawing.Point(475, 487);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(180, 35);
+			this.button1.TabIndex = 56;
+			this.button1.Text = "Edit My Schedule";
+			this.button1.UseVisualStyleBackColor = true;
+			this.button1.Click += new System.EventHandler(this.button1_Click);
+			// 
 			// ComparisonPage
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.CornflowerBlue;
 			this.ClientSize = new System.Drawing.Size(977, 541);
+			this.Controls.Add(this.button1);
 			this.Controls.Add(this.addFriendButton);
 			this.Controls.Add(this.friendBox);
 			this.Controls.Add(this.AddClassLabel);
@@ -908,5 +920,6 @@
         private System.Windows.Forms.GroupBox friendBox;
         private System.Windows.Forms.Panel friendPanel;
         private System.Windows.Forms.Button addFriendButton;
-    }
+		private System.Windows.Forms.Button button1;
+	}
 }
