@@ -1,6 +1,6 @@
 ﻿namespace SNHU_Sched_Landing_Page
 {
-    partial class NewAccount1
+    partial class CreateNewUser
     {
         /// <summary>
         /// Required designer variable.

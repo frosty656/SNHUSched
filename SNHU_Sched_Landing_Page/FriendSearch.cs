@@ -12,9 +12,9 @@ using MySql;
 
 namespace SNHU_Sched_Landing_Page
 {
-    public partial class AddFriends : Form
+    public partial class FriendSearch : Form
     {
-        public AddFriends()
+        public FriendSearch()
         {
             InitializeComponent();
             

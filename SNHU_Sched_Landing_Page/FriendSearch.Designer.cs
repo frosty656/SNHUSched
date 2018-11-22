@@ -1,6 +1,6 @@
 ﻿namespace SNHU_Sched_Landing_Page
 {
-    partial class AddFriends
+    partial class FriendSearch
     {
         /// <summary>
         /// Required designer variable.

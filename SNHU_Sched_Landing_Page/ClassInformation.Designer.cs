@@ -1,6 +1,6 @@
 ﻿namespace SNHU_Sched_Landing_Page
 {
-	partial class LoginHome
+	partial class ClassInformation
 	{
 		/// <summary>
 		/// Required designer variable.

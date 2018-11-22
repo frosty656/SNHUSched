@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SNHU_Sched_Landing_Page
 {
-	public partial class LoginHome : Form
+	public partial class ClassInformation : Form
 	{
-		public LoginHome()
+		public ClassInformation()
 		{
 			InitializeComponent();
 		}

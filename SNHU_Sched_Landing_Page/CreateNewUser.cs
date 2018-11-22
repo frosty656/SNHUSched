@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace SNHU_Sched_Landing_Page
 {
-    public partial class NewAccount1 : Form
+    public partial class CreateNewUser : Form
     {
-        public NewAccount1()
+        public CreateNewUser()
         {
             InitializeComponent();
         }

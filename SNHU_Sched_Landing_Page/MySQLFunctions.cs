@@ -239,7 +239,7 @@ namespace SNHU_Sched_Landing_Page
 			cnn.Close();
 
 		}
-		public static void getDetailedClassInfo(string searchCommand, ref List<LoginHome.classInfo> list)
+		public static void getDetailedClassInfo(string searchCommand, ref List<ClassInformation.classInfo> list)
 		{
 
 			string connectionString = null;
@@ -264,7 +264,7 @@ namespace SNHU_Sched_Landing_Page
 				var room = dr["roomnumber"];
 				var buildingChoice = dr["building"];
 				var className = dr["classID"];
-				list.Add(new LoginHome.classInfo() { startTime = time.ToString(), day = day.ToString(), building = buildingChoice.ToString(),
+				list.Add(new ClassInformation.classInfo() { startTime = time.ToString(), day = day.ToString(), building = buildingChoice.ToString(),
 					classID = className.ToString(),
 					professor = prof.ToString(), roomNumber = room.ToString() });
 			}

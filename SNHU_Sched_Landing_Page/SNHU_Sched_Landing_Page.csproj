@@ -51,11 +51,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddFriends.cs">
+    <Compile Include="FriendSearch.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddFriends.Designer.cs">
-      <DependentUpon>AddFriends.cs</DependentUpon>
+    <Compile Include="FriendSearch.Designer.cs">
+      <DependentUpon>FriendSearch.cs</DependentUpon>
     </Compile>
     <Compile Include="ComparisonPage.cs">
       <SubType>Form</SubType>
@@ -63,52 +63,52 @@
     <Compile Include="ComparisonPage.Designer.cs">
       <DependentUpon>ComparisonPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Schedule Input2.cs">
+    <Compile Include="EditSchedule.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Schedule Input2.Designer.cs">
-      <DependentUpon>Schedule Input2.cs</DependentUpon>
+    <Compile Include="EditSchedule.Designer.cs">
+      <DependentUpon>EditSchedule.cs</DependentUpon>
     </Compile>
     <Compile Include="transition.cs" />
     <Compile Include="userInfo.cs" />
-    <Compile Include="Welcome Page.cs">
+    <Compile Include="HomePage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Welcome Page.Designer.cs">
-      <DependentUpon>Welcome Page.cs</DependentUpon>
+    <Compile Include="HomePage.Designer.cs">
+      <DependentUpon>HomePage.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginHome.cs">
+    <Compile Include="ClassInformation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginHome.Designer.cs">
-      <DependentUpon>LoginHome.cs</DependentUpon>
+    <Compile Include="ClassInformation.Designer.cs">
+      <DependentUpon>ClassInformation.cs</DependentUpon>
     </Compile>
     <Compile Include="MySQLFunctions.cs" />
-    <Compile Include="NewAccount1.cs">
+    <Compile Include="CreateNewUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NewAccount1.Designer.cs">
-      <DependentUpon>NewAccount1.cs</DependentUpon>
+    <Compile Include="CreateNewUser.Designer.cs">
+      <DependentUpon>CreateNewUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AddFriends.resx">
-      <DependentUpon>AddFriends.cs</DependentUpon>
+    <EmbeddedResource Include="FriendSearch.resx">
+      <DependentUpon>FriendSearch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ComparisonPage.resx">
       <DependentUpon>ComparisonPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Schedule Input2.resx">
-      <DependentUpon>Schedule Input2.cs</DependentUpon>
+    <EmbeddedResource Include="EditSchedule.resx">
+      <DependentUpon>EditSchedule.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Welcome Page.resx">
-      <DependentUpon>Welcome Page.cs</DependentUpon>
+    <EmbeddedResource Include="HomePage.resx">
+      <DependentUpon>HomePage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginHome.resx">
-      <DependentUpon>LoginHome.cs</DependentUpon>
+    <EmbeddedResource Include="ClassInformation.resx">
+      <DependentUpon>ClassInformation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NewAccount1.resx">
-      <DependentUpon>NewAccount1.cs</DependentUpon>
+    <EmbeddedResource Include="CreateNewUser.resx">
+      <DependentUpon>CreateNewUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

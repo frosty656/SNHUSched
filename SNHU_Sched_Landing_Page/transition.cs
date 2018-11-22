@@ -10,7 +10,7 @@ namespace SNHU_Sched_Landing_Page
 	{
 		public static void openFriendSeach()
 		{
-			AddFriends page = new AddFriends();
+			FriendSearch page = new FriendSearch();
 			page.ShowDialog();
 		}
 		public static void openComparePage()
@@ -20,12 +20,12 @@ namespace SNHU_Sched_Landing_Page
 		}
 		public static void openClassView()
 		{
-			LoginHome page = new LoginHome();
+			ClassInformation page = new ClassInformation();
 			page.ShowDialog();
 		}
 		public static void openNewAccount()
 		{
-			NewAccount1 page = new NewAccount1();
+			CreateNewUser page = new CreateNewUser();
 			page.ShowDialog();
 		}
 		public static void openScheduleInput()
