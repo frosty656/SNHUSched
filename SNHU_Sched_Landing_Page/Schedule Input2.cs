@@ -78,8 +78,6 @@ namespace SNHU_Sched_Landing_Page
 				{
 					MessageBox.Show(k.Message);
 				}
-
-
 			}
 			blockList.Clear();
 
@@ -237,8 +235,9 @@ namespace SNHU_Sched_Landing_Page
 
 			if (noOpenClasses)
 			{
-				LoginHome addfreinds = new LoginHome();
-				addfreinds.ShowDialog();
+				this.Hide();
+				transition.openClassView();
+				this.Close();
 			}
 
 		}

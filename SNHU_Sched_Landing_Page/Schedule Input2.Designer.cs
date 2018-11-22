@@ -30,6 +30,12 @@
 		{
 			this.friendBox = new System.Windows.Forms.GroupBox();
 			this.friendPanel = new System.Windows.Forms.Panel();
+			this.buildingInput = new System.Windows.Forms.TextBox();
+			this.label16 = new System.Windows.Forms.Label();
+			this.label15 = new System.Windows.Forms.Label();
+			this.roomInput = new System.Windows.Forms.TextBox();
+			this.label14 = new System.Windows.Forms.Label();
+			this.profInput = new System.Windows.Forms.TextBox();
 			this.button1 = new System.Windows.Forms.Button();
 			this.classIDLabel = new System.Windows.Forms.Label();
 			this.classIDInput = new System.Windows.Forms.TextBox();
@@ -86,12 +92,6 @@
 			this.fri3 = new System.Windows.Forms.Button();
 			this.fri2 = new System.Windows.Forms.Button();
 			this.fri1 = new System.Windows.Forms.Button();
-			this.label14 = new System.Windows.Forms.Label();
-			this.profInput = new System.Windows.Forms.TextBox();
-			this.label15 = new System.Windows.Forms.Label();
-			this.roomInput = new System.Windows.Forms.TextBox();
-			this.label16 = new System.Windows.Forms.Label();
-			this.buildingInput = new System.Windows.Forms.TextBox();
 			this.button2 = new System.Windows.Forms.Button();
 			this.friendBox.SuspendLayout();
 			this.friendPanel.SuspendLayout();
@@ -125,6 +125,57 @@
 			this.friendPanel.Name = "friendPanel";
 			this.friendPanel.Size = new System.Drawing.Size(262, 378);
 			this.friendPanel.TabIndex = 0;
+			// 
+			// buildingInput
+			// 
+			this.buildingInput.Location = new System.Drawing.Point(88, 160);
+			this.buildingInput.MaxLength = 20;
+			this.buildingInput.Name = "buildingInput";
+			this.buildingInput.Size = new System.Drawing.Size(163, 29);
+			this.buildingInput.TabIndex = 7;
+			// 
+			// label16
+			// 
+			this.label16.AutoSize = true;
+			this.label16.Location = new System.Drawing.Point(8, 163);
+			this.label16.Name = "label16";
+			this.label16.Size = new System.Drawing.Size(83, 24);
+			this.label16.TabIndex = 8;
+			this.label16.Text = "Building:";
+			// 
+			// label15
+			// 
+			this.label15.AutoSize = true;
+			this.label15.Location = new System.Drawing.Point(8, 112);
+			this.label15.Name = "label15";
+			this.label15.Size = new System.Drawing.Size(76, 24);
+			this.label15.TabIndex = 6;
+			this.label15.Text = "Room#:";
+			// 
+			// roomInput
+			// 
+			this.roomInput.Location = new System.Drawing.Point(88, 109);
+			this.roomInput.MaxLength = 20;
+			this.roomInput.Name = "roomInput";
+			this.roomInput.Size = new System.Drawing.Size(163, 29);
+			this.roomInput.TabIndex = 5;
+			// 
+			// label14
+			// 
+			this.label14.AutoSize = true;
+			this.label14.Location = new System.Drawing.Point(8, 66);
+			this.label14.Name = "label14";
+			this.label14.Size = new System.Drawing.Size(48, 24);
+			this.label14.TabIndex = 4;
+			this.label14.Text = "Prof:";
+			// 
+			// profInput
+			// 
+			this.profInput.Location = new System.Drawing.Point(88, 63);
+			this.profInput.MaxLength = 20;
+			this.profInput.Name = "profInput";
+			this.profInput.Size = new System.Drawing.Size(163, 29);
+			this.profInput.TabIndex = 3;
 			// 
 			// button1
 			// 
@@ -762,57 +813,6 @@
 			this.fri1.UseVisualStyleBackColor = false;
 			this.fri1.Click += new System.EventHandler(this.selectDayAndTime);
 			// 
-			// label14
-			// 
-			this.label14.AutoSize = true;
-			this.label14.Location = new System.Drawing.Point(8, 66);
-			this.label14.Name = "label14";
-			this.label14.Size = new System.Drawing.Size(48, 24);
-			this.label14.TabIndex = 4;
-			this.label14.Text = "Prof:";
-			// 
-			// profInput
-			// 
-			this.profInput.Location = new System.Drawing.Point(88, 63);
-			this.profInput.MaxLength = 20;
-			this.profInput.Name = "profInput";
-			this.profInput.Size = new System.Drawing.Size(163, 29);
-			this.profInput.TabIndex = 3;
-			// 
-			// label15
-			// 
-			this.label15.AutoSize = true;
-			this.label15.Location = new System.Drawing.Point(8, 112);
-			this.label15.Name = "label15";
-			this.label15.Size = new System.Drawing.Size(76, 24);
-			this.label15.TabIndex = 6;
-			this.label15.Text = "Room#:";
-			// 
-			// roomInput
-			// 
-			this.roomInput.Location = new System.Drawing.Point(88, 109);
-			this.roomInput.MaxLength = 20;
-			this.roomInput.Name = "roomInput";
-			this.roomInput.Size = new System.Drawing.Size(163, 29);
-			this.roomInput.TabIndex = 5;
-			// 
-			// label16
-			// 
-			this.label16.AutoSize = true;
-			this.label16.Location = new System.Drawing.Point(8, 163);
-			this.label16.Name = "label16";
-			this.label16.Size = new System.Drawing.Size(83, 24);
-			this.label16.TabIndex = 8;
-			this.label16.Text = "Building:";
-			// 
-			// buildingInput
-			// 
-			this.buildingInput.Location = new System.Drawing.Point(88, 160);
-			this.buildingInput.MaxLength = 20;
-			this.buildingInput.Name = "buildingInput";
-			this.buildingInput.Size = new System.Drawing.Size(163, 29);
-			this.buildingInput.TabIndex = 7;
-			// 
 			// button2
 			// 
 			this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -828,7 +828,8 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(949, 522);
+			this.BackColor = System.Drawing.Color.CornflowerBlue;
+			this.ClientSize = new System.Drawing.Size(977, 541);
 			this.Controls.Add(this.button2);
 			this.Controls.Add(this.fri8);
 			this.Controls.Add(this.fri7);

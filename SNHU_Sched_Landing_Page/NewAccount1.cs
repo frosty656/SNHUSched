@@ -33,8 +33,9 @@ namespace SNHU_Sched_Landing_Page
 
                 userInfo.setCurrentUser(Int32.Parse(StudentID.Text));
 
-                Schedule_Input2 scheduleInput = new Schedule_Input2();
-				scheduleInput.ShowDialog();
+				this.Hide();
+				transition.openScheduleInput();
+				this.Close();
 			}
         }
 

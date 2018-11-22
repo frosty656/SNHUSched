@@ -96,8 +96,9 @@ namespace SNHU_Sched_Landing_Page
 
         private void addFriendButton_Click(object sender, EventArgs e)
         {
-            AddFriends addfreinds = new AddFriends();
-            addfreinds.ShowDialog();
+			this.Hide();
+			transition.openFriendSeach();
+			this.Close();
         }
 
 
@@ -179,10 +180,20 @@ namespace SNHU_Sched_Landing_Page
 			}
 		}
 
-		private void button1_Click(object sender, EventArgs e)
+		private void openScheduleView_Click(object sender, EventArgs e)
 		{
-			Schedule_Input2 addfreinds = new Schedule_Input2();
-			addfreinds.ShowDialog();
+			this.Hide();
+			transition.openClassView();
+			this.Close();
+		}
+
+		private void LogOutButton_Click(object sender, EventArgs e)
+		{
+			userInfo.setCurrentUser(0);
+
+			this.Hide();
+			transition.openHomePage();
+			this.Close();
 		}
 	}
 }

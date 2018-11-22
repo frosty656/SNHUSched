@@ -91,6 +91,8 @@
 			this.profLabel = new System.Windows.Forms.Label();
 			this.buildingLabel = new System.Windows.Forms.Label();
 			this.roomLabel = new System.Windows.Forms.Label();
+			this.button2 = new System.Windows.Forms.Button();
+			this.logout = new System.Windows.Forms.Button();
 			this.friendBox.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
@@ -117,7 +119,7 @@
 			// 
 			// button1
 			// 
-			this.button1.Location = new System.Drawing.Point(713, 12);
+			this.button1.Location = new System.Drawing.Point(801, 12);
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(75, 23);
 			this.button1.TabIndex = 3;
@@ -799,7 +801,7 @@
 			this.pictureBox1.BackColor = System.Drawing.Color.White;
 			this.pictureBox1.Location = new System.Drawing.Point(201, 412);
 			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(725, 117);
+			this.pictureBox1.Size = new System.Drawing.Size(725, 92);
 			this.pictureBox1.TabIndex = 109;
 			this.pictureBox1.TabStop = false;
 			// 
@@ -847,12 +849,34 @@
 			this.roomLabel.TabIndex = 113;
 			this.roomLabel.Text = "Room #:";
 			// 
+			// button2
+			// 
+			this.button2.Location = new System.Drawing.Point(661, 12);
+			this.button2.Name = "button2";
+			this.button2.Size = new System.Drawing.Size(134, 23);
+			this.button2.TabIndex = 114;
+			this.button2.Text = "Edit Schedule";
+			this.button2.UseVisualStyleBackColor = true;
+			this.button2.Click += new System.EventHandler(this.button2_Click);
+			// 
+			// logout
+			// 
+			this.logout.Location = new System.Drawing.Point(890, 12);
+			this.logout.Name = "logout";
+			this.logout.Size = new System.Drawing.Size(75, 23);
+			this.logout.TabIndex = 115;
+			this.logout.Text = "Log Out";
+			this.logout.UseVisualStyleBackColor = true;
+			this.logout.Click += new System.EventHandler(this.logout_Click);
+			// 
 			// LoginHome
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.CornflowerBlue;
 			this.ClientSize = new System.Drawing.Size(977, 541);
+			this.Controls.Add(this.logout);
+			this.Controls.Add(this.button2);
 			this.Controls.Add(this.roomLabel);
 			this.Controls.Add(this.buildingLabel);
 			this.Controls.Add(this.profLabel);
@@ -990,5 +1014,7 @@
 		private System.Windows.Forms.Label profLabel;
 		private System.Windows.Forms.Label buildingLabel;
 		private System.Windows.Forms.Label roomLabel;
+		private System.Windows.Forms.Button button2;
+		private System.Windows.Forms.Button logout;
 	}
 }

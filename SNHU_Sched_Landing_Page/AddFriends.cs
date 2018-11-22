@@ -171,5 +171,12 @@ namespace SNHU_Sched_Landing_Page
             MessageBox.Show("This matching already exists");
             return false;
         }
-    } 
+
+		private void backButton_Click(object sender, EventArgs e)
+		{
+			this.Hide();
+			transition.openComparePage();
+			this.Close();
+		}
+	} 
 }

@@ -85,7 +85,8 @@
 			this.friendBox = new System.Windows.Forms.GroupBox();
 			this.friendPanel = new System.Windows.Forms.Panel();
 			this.addFriendButton = new System.Windows.Forms.Button();
-			this.button1 = new System.Windows.Forms.Button();
+			this.openScheduleView = new System.Windows.Forms.Button();
+			this.LogOutButton = new System.Windows.Forms.Button();
 			this.friendBox.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -778,15 +779,29 @@
 			this.addFriendButton.UseVisualStyleBackColor = true;
 			this.addFriendButton.Click += new System.EventHandler(this.addFriendButton_Click);
 			// 
-			// button1
+			// openScheduleView
 			// 
-			this.button1.Location = new System.Drawing.Point(475, 487);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(180, 35);
-			this.button1.TabIndex = 56;
-			this.button1.Text = "Edit My Schedule";
-			this.button1.UseVisualStyleBackColor = true;
-			this.button1.Click += new System.EventHandler(this.button1_Click);
+			this.openScheduleView.BackColor = System.Drawing.Color.White;
+			this.openScheduleView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.openScheduleView.Location = new System.Drawing.Point(773, 3);
+			this.openScheduleView.Name = "openScheduleView";
+			this.openScheduleView.Size = new System.Drawing.Size(101, 30);
+			this.openScheduleView.TabIndex = 56;
+			this.openScheduleView.Text = "Your Schedule";
+			this.openScheduleView.UseVisualStyleBackColor = false;
+			this.openScheduleView.Click += new System.EventHandler(this.openScheduleView_Click);
+			// 
+			// LogOutButton
+			// 
+			this.LogOutButton.BackColor = System.Drawing.Color.White;
+			this.LogOutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.LogOutButton.Location = new System.Drawing.Point(873, 3);
+			this.LogOutButton.Name = "LogOutButton";
+			this.LogOutButton.Size = new System.Drawing.Size(101, 30);
+			this.LogOutButton.TabIndex = 58;
+			this.LogOutButton.Text = "Log Out";
+			this.LogOutButton.UseVisualStyleBackColor = false;
+			this.LogOutButton.Click += new System.EventHandler(this.LogOutButton_Click);
 			// 
 			// ComparisonPage
 			// 
@@ -794,10 +809,10 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.CornflowerBlue;
 			this.ClientSize = new System.Drawing.Size(977, 541);
-			this.Controls.Add(this.button1);
+			this.Controls.Add(this.LogOutButton);
+			this.Controls.Add(this.openScheduleView);
 			this.Controls.Add(this.addFriendButton);
 			this.Controls.Add(this.friendBox);
-			this.Controls.Add(this.AddClassLabel);
 			this.Controls.Add(this.fri8);
 			this.Controls.Add(this.fri7);
 			this.Controls.Add(this.fri6);
@@ -851,6 +866,7 @@
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
+			this.Controls.Add(this.AddClassLabel);
 			this.Margin = new System.Windows.Forms.Padding(2);
 			this.Name = "ComparisonPage";
 			this.Text = "ComparisonPage";
@@ -920,6 +936,7 @@
         private System.Windows.Forms.GroupBox friendBox;
         private System.Windows.Forms.Panel friendPanel;
         private System.Windows.Forms.Button addFriendButton;
-		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.Button openScheduleView;
+		private System.Windows.Forms.Button LogOutButton;
 	}
 }

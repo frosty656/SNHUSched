@@ -62,8 +62,10 @@ namespace SNHU_Sched_Landing_Page
 				if (MySQLFunctions.GenerateHash(passwordInput.Text, usernameInput.Text) == MySQLFunctions.getPass(usernameInput.Text))
 				{
                     userInfo.setCurrentUser(MySQLFunctions.getUserIDFromEmail(usernameInput.Text));
-					LoginHome loginHome = new LoginHome();
-					loginHome.ShowDialog();
+
+					this.Hide();
+					transition.openClassView();
+					this.Close();
 				}
 				else
 				{
@@ -79,8 +81,9 @@ namespace SNHU_Sched_Landing_Page
 
         private void signUp_Click(object sender, EventArgs e)
         {
-            NewAccount1 newAccount = new NewAccount1();
-            newAccount.ShowDialog();
+			this.Hide();
+			transition.openNewAccount();
+			this.Close();
         }
 	}
 }

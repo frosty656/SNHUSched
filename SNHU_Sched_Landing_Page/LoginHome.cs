@@ -130,8 +130,24 @@ namespace SNHU_Sched_Landing_Page
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ComparisonPage comparisonPage = new ComparisonPage();
-            comparisonPage.ShowDialog();
+			this.Hide();
+			transition.openComparePage();
+			this.Close();
         }
-    }
+
+		private void button2_Click(object sender, EventArgs e)
+		{
+			this.Hide();
+			transition.openScheduleInput();
+			this.Close();
+		}
+
+		private void logout_Click(object sender, EventArgs e)
+		{
+			userInfo.setCurrentUser(0);
+			this.Hide();
+			transition.openHomePage();
+			this.Close();
+		}
+	}
 }

@@ -148,7 +148,7 @@
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.CornflowerBlue;
-			this.ClientSize = new System.Drawing.Size(747, 386);
+			this.ClientSize = new System.Drawing.Size(977, 541);
 			this.Controls.Add(this.signUp);
 			this.Controls.Add(this.textBox4);
 			this.Controls.Add(this.usernameInput);
