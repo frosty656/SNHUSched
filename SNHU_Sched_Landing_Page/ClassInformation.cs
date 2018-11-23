@@ -46,27 +46,11 @@ namespace SNHU_Sched_Landing_Page
 
             MySQLFunctions.getDetailedClassInfo($"SELECT classID, startTime, day, building, roomnumber, professor FROM timeblock WHERE userID LIKE " +
 				$"{userInfo.getCurrentUser()};", ref classList);
-
-            classList = classList.Distinct().ToList();
-
+			int index = 0;
+			string lastClass = "";
 			foreach (var t in classList)
 			{
-				Button button = new Button();
-				button.Name = t.classID;
-				button.Text = t.classID ;
-				button.Location = new Point(10, friendPanel.Controls.Count * 25);
-				button.Size = new Size(120, 25);
-				button.Font = new Font(button.Font.FontFamily, 12);
-				button.Click += (s, z) =>
-				{
-					classnameLabel.Text = t.classID + " Details:";
-					profLabel.Text = "Professor: " + t.professor;
-					buildingLabel.Text = "Building: " + t.building;
-					roomLabel.Text = "Room: " + t.roomNumber;
-
-				};
-				friendPanel.Controls.Add(button);
-
+				bool dulpicateName = false;
 				string day = "", time = "", combined = "";
 				switch (t.day)
 				{
@@ -118,12 +102,44 @@ namespace SNHU_Sched_Landing_Page
 
 				try
 				{
-					this.Controls[combined].BackColor = Color.OrangeRed;
+					this.Controls[combined].BackColor = newColor(index);
+					this.Controls[combined].Text = t.classID;
+
 				}
 				catch (ArgumentException k)
 				{
 					MessageBox.Show(k.Message);
 				}
+
+				if (lastClass == t.classID)
+				{
+					dulpicateName = true;
+					index++;
+				}
+
+
+				if (!dulpicateName)
+				{
+					Button button = new Button();
+					button.Name = t.classID;
+					button.Text = t.classID;
+					button.BackColor = newColor(index);
+					button.Location = new Point(10, friendPanel.Controls.Count * 25);
+					button.Size = new Size(120, 25);
+					button.Font = new Font(button.Font.FontFamily, 12);
+					button.Click += (s, z) =>
+					{
+						classnameLabel.Text = t.classID + " Details:";
+						profLabel.Text = "Professor: " + t.professor;
+						buildingLabel.Text = "Building: " + t.building;
+						roomLabel.Text = "Room: " + t.roomNumber;
+
+					};
+					friendPanel.Controls.Add(button);
+					
+				}
+
+				lastClass = t.classID;
 			}
 
         }
@@ -148,6 +164,31 @@ namespace SNHU_Sched_Landing_Page
 			this.Hide();
 			transition.openHomePage();
 			this.Close();
+		}
+
+		private Color newColor(int index)
+		{
+			switch (index)
+			{
+				case 1:
+					return Color.Plum;
+				case 2:
+					return Color.Orange;
+				case 3:
+					return Color.Blue;
+				case 4:
+					return Color.Pink;
+				case 5:
+					return Color.MediumPurple;
+				case 6:
+					return Color.Green;
+				case 7:
+					return Color.Gray;
+				case 8:
+					return Color.SandyBrown;
+				default:
+					return Color.Red;
+			}
 		}
 	}
 }

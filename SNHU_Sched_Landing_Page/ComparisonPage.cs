@@ -49,6 +49,7 @@ namespace SNHU_Sched_Landing_Page
 			var selectedFriendList = new List<string>();// List of all friends you have selected to comapare
 			var friendIDs = new List<string>(); //List of IDs of all friends of current user
 
+			selectedFriendList.Add(userInfo.getCurrentUser().ToString());
 
             MySQLFunctions.getInfo($"SELECT friendID FROM friendtable WHERE userID = {userInfo.getCurrentUser()};", ref friendIDs);
 
@@ -57,6 +58,8 @@ namespace SNHU_Sched_Landing_Page
 				MySQLFunctions.getFriendInfo($"SELECT userID, firstname, lastname, email FROM usertable WHERE userID = {p};", ref friendList);
 
 			}
+
+			showOverlap(ref timeBlocks, ref selectedFriendList);
 
 			foreach (var t in friendList)
             {
