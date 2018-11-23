@@ -886,7 +886,7 @@
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
 			this.Name = "Schedule_Input2";
-			this.Text = "Schedule_Input2";
+			this.Text = "Edit Schedule";
 			this.friendBox.ResumeLayout(false);
 			this.friendPanel.ResumeLayout(false);
 			this.friendPanel.PerformLayout();

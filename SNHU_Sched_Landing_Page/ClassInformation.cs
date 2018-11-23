@@ -50,7 +50,6 @@ namespace SNHU_Sched_Landing_Page
 			string lastClass = "";
 			foreach (var t in classList)
 			{
-				bool dulpicateName = false;
 				string day = "", time = "", combined = "";
 				switch (t.day)
 				{
@@ -104,6 +103,14 @@ namespace SNHU_Sched_Landing_Page
 				{
 					this.Controls[combined].BackColor = newColor(index);
 					this.Controls[combined].Text = t.classID;
+					this.Controls[combined].Click += (s, z) =>
+					{
+						classnameLabel.Text = t.classID + " Details:";
+						profLabel.Text = "Professor: " + t.professor;
+						buildingLabel.Text = "Building: " + t.building;
+						roomLabel.Text = "Room: " + t.roomNumber;
+
+					};
 
 				}
 				catch (ArgumentException k)
@@ -113,30 +120,7 @@ namespace SNHU_Sched_Landing_Page
 
 				if (lastClass == t.classID)
 				{
-					dulpicateName = true;
 					index++;
-				}
-
-
-				if (!dulpicateName)
-				{
-					Button button = new Button();
-					button.Name = t.classID;
-					button.Text = t.classID;
-					button.BackColor = newColor(index);
-					button.Location = new Point(10, friendPanel.Controls.Count * 25);
-					button.Size = new Size(120, 25);
-					button.Font = new Font(button.Font.FontFamily, 12);
-					button.Click += (s, z) =>
-					{
-						classnameLabel.Text = t.classID + " Details:";
-						profLabel.Text = "Professor: " + t.professor;
-						buildingLabel.Text = "Building: " + t.building;
-						roomLabel.Text = "Room: " + t.roomNumber;
-
-					};
-					friendPanel.Controls.Add(button);
-					
 				}
 
 				lastClass = t.classID;

@@ -204,7 +204,7 @@
 			this.StudentIDColor.TabIndex = 15;
 			this.StudentIDColor.TabStop = false;
 			// 
-			// NewAccount1
+			// CreateNewUser
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -227,8 +227,8 @@
 			this.Controls.Add(this.Password);
 			this.Controls.Add(this.Email);
 			this.ForeColor = System.Drawing.Color.White;
-			this.Name = "NewAccount1";
-			this.Text = "NewAccount1";
+			this.Name = "CreateNewUser";
+			this.Text = "New User";
 			((System.ComponentModel.ISupportInitialize)(this.EmailColor)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.PasswordColor)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.ConfirmPasswordColor)).EndInit();

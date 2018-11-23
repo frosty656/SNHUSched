@@ -140,7 +140,7 @@
 			this.backButton.UseVisualStyleBackColor = true;
 			this.backButton.Click += new System.EventHandler(this.backButton_Click);
 			// 
-			// AddFriends
+			// FriendSearch
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -156,8 +156,8 @@
 			this.Controls.Add(this.lastnameSearch);
 			this.Controls.Add(this.firstnameSearch);
 			this.Controls.Add(this.Title);
-			this.Name = "AddFriends";
-			this.Text = "AddFriends";
+			this.Name = "FriendSearch";
+			this.Text = "Friend Search";
 			this.resultsBox.ResumeLayout(false);
 			this.ResumeLayout(false);
 			this.PerformLayout();

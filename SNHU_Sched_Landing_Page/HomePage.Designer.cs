@@ -160,7 +160,7 @@
 			this.Controls.Add(this.passwordInput);
 			this.Margin = new System.Windows.Forms.Padding(2);
 			this.Name = "HomePage";
-			this.Text = "Home Page";
+			this.Text = "Welcome";
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();

@@ -869,7 +869,7 @@
 			this.Controls.Add(this.AddClassLabel);
 			this.Margin = new System.Windows.Forms.Padding(2);
 			this.Name = "ComparisonPage";
-			this.Text = "ComparisonPage";
+			this.Text = "Compare";
 			this.Load += new System.EventHandler(this.ComparisonPage_Load);
 			this.friendBox.ResumeLayout(false);
 			this.ResumeLayout(false);
