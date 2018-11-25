@@ -11,7 +11,7 @@ namespace SNHU_Sched_Landing_Page
 {
 	public static class MySQLFunctions
     {
-        public const string MYSQLPassword = "*/x-y7UG_cq&";
+        public const string MYSQLPassword = "beach02";
 
 		public static void SQLCommand(string command)
 		{
@@ -34,7 +34,7 @@ namespace SNHU_Sched_Landing_Page
 
 				MySqlErrorMessage(ex.Number);
 
-               // throw new System.ArgumentException("testing");
+                throw new System.ArgumentException("Error: " + ex);
 
             }
 			cnn.Close();

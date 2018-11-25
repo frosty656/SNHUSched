@@ -20,6 +20,7 @@ namespace SNHU_Sched_Landing_Page
 
         private void SignUpButton_Click(object sender, EventArgs e)
         {
+            bool notAlreadyInDatabase = true;
 			if (SignUpButton.BackColor == Color.Green)
 			{
 				//Get first and last name from email
@@ -28,15 +29,23 @@ namespace SNHU_Sched_Landing_Page
 				string lastName = email.Split('.')[1];
 				lastName = lastName.Split('@')[0];
 
-				NewUser(Int32.Parse(StudentID.Text), firstName, lastName, Email.Text, MySQLFunctions.GenerateHash(Password.Text, Email.Text));
+
+                try
+                {
+                    NewUser(Int32.Parse(StudentID.Text), firstName, lastName, Email.Text, MySQLFunctions.GenerateHash(Password.Text, Email.Text));
+                } catch (ArgumentException)
+                {
+                    return;
+                }
 
 
                 userInfo.setCurrentUser(Int32.Parse(StudentID.Text));
 
-				this.Hide();
-				transition.openScheduleInput();
-				this.Close();
-			}
+
+                this.Hide();
+                transition.openScheduleInput();
+                this.Close();
+            }
         }
 
         private void Email_TextChanged(object sender, EventArgs e)
