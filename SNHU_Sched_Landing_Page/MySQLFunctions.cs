@@ -232,7 +232,12 @@ namespace SNHU_Sched_Landing_Page
 			{
 				var time = dr["startTime"];
 				var day = dr["day"];
-				list.Add(new Schedule_Input2.timeBlock() { startTime = time.ToString(), day = day.ToString() });
+                var a1 = dr["colorA"];
+                var r1 = dr["colorR"];
+                var g1 = dr["colorG"];
+                var b1 = dr["colorB"];
+                list.Add(new Schedule_Input2.timeBlock() { startTime = time.ToString(), day = day.ToString(),
+                    a = Int32.Parse(a1.ToString()), r = Int32.Parse(r1.ToString()), g = Int32.Parse(g1.ToString()), b = Int32.Parse(b1.ToString()) });
 			}
 
 			dr.Close();

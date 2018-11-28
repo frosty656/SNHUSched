@@ -19,7 +19,7 @@ namespace SNHU_Sched_Landing_Page
             ColorButton.BackColor = Color.Red;
             colorDialog1.Color = Color.Red; //Default block color
 
-            MySQLFunctions.getClassInfo($"SELECT day, starttime FROM timeblock WHERE userID = {userInfo.getCurrentUser()}", ref blockList);
+            MySQLFunctions.getClassInfo($"SELECT day, starttime, colorA, colorR, colorG,colorB FROM timeblock WHERE userID = {userInfo.getCurrentUser()}", ref blockList);
 
 			foreach (var l in blockList)
 			{
@@ -74,7 +74,7 @@ namespace SNHU_Sched_Landing_Page
 
 				try
 				{
-					this.Controls[combined].BackColor = Color.OrangeRed;
+                    this.Controls[combined].BackColor = Color.FromArgb(l.a,l.r,l.g,l.b); ;
 				}
 				catch (ArgumentException k)
 				{
@@ -93,7 +93,11 @@ namespace SNHU_Sched_Landing_Page
 			public timeBlock() { }
 			public string startTime { get; set; }
 			public string day { get; set; }
-		}
+            public int a { get; set; }
+            public int r { get; set; }
+            public int g { get; set; }
+            public int b { get; set; }
+        }
 
 		//add class button
 		private void button1_Click(object sender, EventArgs e)
