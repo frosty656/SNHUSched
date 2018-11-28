@@ -123,7 +123,7 @@ namespace SNHU_Sched_Landing_Page
 				{
 					if(s.BackColor == Color.Green)
 					{
-						s.BackColor = Color.OrangeRed;
+						s.BackColor = colorDialog1.Color;
 					}
 				}
 
