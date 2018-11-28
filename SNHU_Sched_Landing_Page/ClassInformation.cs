@@ -36,7 +36,11 @@ namespace SNHU_Sched_Landing_Page
 			public string professor { get; set; }
 			public string building { get; set; }
 			public string roomNumber { get; set; }
-		}
+            public int a { get; set; }
+            public int r { get; set; }
+            public int g { get; set; }
+            public int b { get; set; }
+        }
 
 
 		private void LoginHome_Load(object sender, EventArgs e)
@@ -44,11 +48,10 @@ namespace SNHU_Sched_Landing_Page
 
             var classList = new List<classInfo>();
 
-            MySQLFunctions.getDetailedClassInfo($"SELECT classID, startTime, day, building, roomnumber, professor FROM timeblock WHERE userID LIKE " +
-				$"{userInfo.getCurrentUser()};", ref classList);
-			int index = 0;
-			string lastClass = "";
-			foreach (var t in classList)
+            MySQLFunctions.getDetailedClassInfo($"SELECT classID, startTime, day, building, roomnumber, professor, colorA, colorR, colorG, colorB FROM timeblock WHERE userID LIKE " +
+				$"{userInfo.getCurrentUser()} ORDER BY classID;", ref classList);
+
+            foreach (var t in classList)
 			{
 				string day = "", time = "", combined = "";
 				switch (t.day)
@@ -101,7 +104,7 @@ namespace SNHU_Sched_Landing_Page
 
 				try
 				{
-					this.Controls[combined].BackColor = newColor(index);
+                    this.Controls[combined].BackColor = Color.FromArgb(t.a,t.r,t.g,t.b); ;
 					this.Controls[combined].Text = t.classID;
 					this.Controls[combined].Click += (s, z) =>
 					{
@@ -117,13 +120,6 @@ namespace SNHU_Sched_Landing_Page
 				{
 					MessageBox.Show(k.Message);
 				}
-
-				if (lastClass == t.classID)
-				{
-					index++;
-				}
-
-				lastClass = t.classID;
 			}
 
         }
@@ -148,31 +144,6 @@ namespace SNHU_Sched_Landing_Page
 			this.Hide();
 			transition.openHomePage();
 			this.Close();
-		}
-
-		private Color newColor(int index)
-		{
-			switch (index)
-			{
-				case 1:
-					return Color.Plum;
-				case 2:
-					return Color.Orange;
-				case 3:
-					return Color.Blue;
-				case 4:
-					return Color.Pink;
-				case 5:
-					return Color.MediumPurple;
-				case 6:
-					return Color.Green;
-				case 7:
-					return Color.Gray;
-				case 8:
-					return Color.SandyBrown;
-				default:
-					return Color.Red;
-			}
 		}
 	}
 }

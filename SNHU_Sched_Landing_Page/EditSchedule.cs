@@ -16,8 +16,10 @@ namespace SNHU_Sched_Landing_Page
 		{
 			InitializeComponent();
 
+            ColorButton.BackColor = Color.Red;
+            colorDialog1.Color = Color.Red; //Default block color
 
-			MySQLFunctions.getClassInfo($"SELECT day, starttime FROM timeblock WHERE userID = {userInfo.getCurrentUser()}", ref blockList);
+            MySQLFunctions.getClassInfo($"SELECT day, starttime FROM timeblock WHERE userID = {userInfo.getCurrentUser()}", ref blockList);
 
 			foreach (var l in blockList)
 			{
@@ -106,7 +108,8 @@ namespace SNHU_Sched_Landing_Page
 				foreach (var p in blockList)
 				{
 					MySQLFunctions.SQLCommand($"INSERT INTO timeblock VALUES ({userInfo.getCurrentUser()}, '{classIDInput.Text}', " +
-						$"'{p.startTime}', '{p.day}', '{buildingInput.Text}', '{roomInput.Text}', '{profInput.Text}')");
+						$"'{p.startTime}', '{p.day}', '{buildingInput.Text}', '{roomInput.Text}', '{profInput.Text}', " +
+                        $"'{colorDialog1.Color.A}', '{colorDialog1.Color.R}', '{colorDialog1.Color.G}', '{colorDialog1.Color.B}')");
 
 				}
 				blockList.Clear();
@@ -241,5 +244,14 @@ namespace SNHU_Sched_Landing_Page
 			}
 
 		}
-	}
+
+        private void ColorButton_Click(object sender, EventArgs e)
+        {
+            if(colorDialog1.ShowDialog() != DialogResult.Cancel)
+            {
+            
+                ColorButton.BackColor = colorDialog1.Color;
+            }
+        }
+    }
 }

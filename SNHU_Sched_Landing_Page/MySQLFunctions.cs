@@ -264,9 +264,14 @@ namespace SNHU_Sched_Landing_Page
 				var room = dr["roomnumber"];
 				var buildingChoice = dr["building"];
 				var className = dr["classID"];
-				list.Add(new ClassInformation.classInfo() { startTime = time.ToString(), day = day.ToString(), building = buildingChoice.ToString(),
-					classID = className.ToString(),
-					professor = prof.ToString(), roomNumber = room.ToString() });
+                var a1 = dr["colorA"];
+                var r1 = dr["colorR"];
+                var g1 = dr["colorG"];
+                var b1 = dr["colorB"];
+
+                list.Add(new ClassInformation.classInfo() { startTime = time.ToString(), day = day.ToString(), building = buildingChoice.ToString(),
+                    classID = className.ToString(), professor = prof.ToString(), roomNumber = room.ToString(),
+                    a = Int32.Parse(a1.ToString()), r = Int32.Parse(r1.ToString()), g = Int32.Parse(g1.ToString()), b = Int32.Parse(b1.ToString()) });
 			}
 
 			dr.Close();
