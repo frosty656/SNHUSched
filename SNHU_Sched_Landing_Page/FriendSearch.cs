@@ -116,6 +116,7 @@ namespace SNHU_Sched_Landing_Page
                 btn.Location = new Point(10, j * 25 + 5);
                 btn.BackColor = color;
                 btn.ForeColor = color;
+				btn.FlatStyle = FlatStyle.Flat;
                 btn.Click += new EventHandler(this.MyButtonHandler);
                 resultsPanel.Controls.Add(btn);
                 counter++;
