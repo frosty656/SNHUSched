@@ -45,7 +45,7 @@ namespace SNHU_Sched_Landing_Page
             studentList.Clear();
 
 
-            MySQLFunctions.getInfo("SELECT userID FROM usertable;", ref studentIDs);
+            MySQLFunctions.getInfo($"SELECT userID FROM usertable WHERE userID NOT LIKE '{userInfo.getCurrentUser()}';", ref studentIDs);
 
             foreach( var p in studentIDs)
             {
@@ -96,13 +96,26 @@ namespace SNHU_Sched_Landing_Page
             int j = 0;
             foreach (var p in studentList)
             {
+                var color = Color.Blue;
+                var alreadyFriend = new List<String>();
+                //determin button color
+                MySQLFunctions.getInfo($"SELECT * FROM friendtable WHERE userID = {userInfo.getCurrentUser()} AND friendID = {p.StudentID}", ref alreadyFriend);
+
+                if (alreadyFriend.Count != 0)
+                {
+                    color = Color.Green;
+                } else
+                {
+                    color = Color.Red;
+                }
+
                 Button btn = new Button();
                 btn.Name = p.StudentID;
                 btn.Text = "";
                 btn.Size = new Size(20,20);
                 btn.Location = new Point(10, j * 25 + 5);
-                btn.BackColor = Color.Red;
-                btn.ForeColor = Color.Red;
+                btn.BackColor = color;
+                btn.ForeColor = color;
                 btn.Click += new EventHandler(this.MyButtonHandler);
                 resultsPanel.Controls.Add(btn);
                 counter++;
@@ -131,10 +144,11 @@ namespace SNHU_Sched_Landing_Page
         {
             Button btn = (Button) sender;
 
-            
 
-            if (DuplicateFriends(userInfo.getCurrentUser().ToString(), btn.Name))
+            if (DuplicateFriends(userInfo.getCurrentUser().ToString(), btn))
             {
+
+
                 bool success = true;
                 try
                 {
@@ -148,12 +162,16 @@ namespace SNHU_Sched_Landing_Page
                 if (success)
                 {
                     MessageBox.Show("Friend Added");
+                    btn.ForeColor = Color.Green;
+                    btn.BackColor = Color.Green;
                 }
             }
         }
 
-        private bool DuplicateFriends(string userID, string friendID)
+        private bool DuplicateFriends(string userID, object sender)
         {
+            var btn = (Button)sender;
+            string friendID = btn.Name;
             var test = new List<string>();
 
             MySQLFunctions.getInfo($"SELECT * FROM friendtable WHERE userID = {userID} AND friendID = {friendID}", ref test);
@@ -168,11 +186,19 @@ namespace SNHU_Sched_Landing_Page
                 return true;
             }
 
-            MessageBox.Show("This matching already exists");
+            DialogResult dialogResult = MessageBox.Show("Would you like to remove them?", "You are currently friends,", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                MySQLFunctions.SQLCommand($"DELETE FROM friendtable WHERE userID = {userInfo.getCurrentUser()} AND friendID = {friendID}");
+                btn.BackColor = Color.Red;
+                btn.ForeColor = Color.Red;
+
+            }
+
             return false;
         }
 
-		private void backButton_Click(object sender, EventArgs e)
+        private void backButton_Click(object sender, EventArgs e)
 		{
 			this.Hide();
 			transition.openComparePage();

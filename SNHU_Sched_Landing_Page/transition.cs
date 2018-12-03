@@ -39,5 +39,11 @@ namespace SNHU_Sched_Landing_Page
 			page.ShowDialog();
 		}
 
+        public static void openAccountSettingsPage()
+        {
+            ChangeAccountInfo page = new ChangeAccountInfo();
+            page.ShowDialog();
+        }
+
 	}
 }

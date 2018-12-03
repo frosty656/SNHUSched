@@ -145,5 +145,12 @@ namespace SNHU_Sched_Landing_Page
 			transition.openHomePage();
 			this.Close();
 		}
-	}
+
+        private void EditAccountInfoButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            transition.openAccountSettingsPage();
+            this.Close();
+        }
+    }
 }

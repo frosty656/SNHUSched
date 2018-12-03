@@ -30,6 +30,8 @@
 		{
             this.friendBox = new System.Windows.Forms.GroupBox();
             this.friendPanel = new System.Windows.Forms.Panel();
+            this.ColorButton = new System.Windows.Forms.Button();
+            this.label17 = new System.Windows.Forms.Label();
             this.buildingInput = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -94,8 +96,6 @@
             this.fri1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.label17 = new System.Windows.Forms.Label();
-            this.ColorButton = new System.Windows.Forms.Button();
             this.friendBox.SuspendLayout();
             this.friendPanel.SuspendLayout();
             this.SuspendLayout();
@@ -130,6 +130,24 @@
             this.friendPanel.Name = "friendPanel";
             this.friendPanel.Size = new System.Drawing.Size(262, 378);
             this.friendPanel.TabIndex = 0;
+            // 
+            // ColorButton
+            // 
+            this.ColorButton.Location = new System.Drawing.Point(112, 219);
+            this.ColorButton.Name = "ColorButton";
+            this.ColorButton.Size = new System.Drawing.Size(139, 25);
+            this.ColorButton.TabIndex = 10;
+            this.ColorButton.UseVisualStyleBackColor = true;
+            this.ColorButton.Click += new System.EventHandler(this.ColorButton_Click);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(8, 219);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(98, 24);
+            this.label17.TabIndex = 9;
+            this.label17.Text = "Box Color:";
             // 
             // buildingInput
             // 
@@ -828,24 +846,6 @@
             this.button2.Text = "Done";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(8, 219);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(98, 24);
-            this.label17.TabIndex = 9;
-            this.label17.Text = "Box Color:";
-            // 
-            // ColorButton
-            // 
-            this.ColorButton.Location = new System.Drawing.Point(112, 219);
-            this.ColorButton.Name = "ColorButton";
-            this.ColorButton.Size = new System.Drawing.Size(139, 25);
-            this.ColorButton.TabIndex = 10;
-            this.ColorButton.UseVisualStyleBackColor = true;
-            this.ColorButton.Click += new System.EventHandler(this.ColorButton_Click);
             // 
             // Schedule_Input2
             // 

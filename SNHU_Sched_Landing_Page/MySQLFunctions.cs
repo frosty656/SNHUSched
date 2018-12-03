@@ -114,6 +114,7 @@ namespace SNHU_Sched_Landing_Page
             while (dr.Read())
             {
                 list.Add(dr.GetString(0));
+                
             }
 
             dr.Close();
