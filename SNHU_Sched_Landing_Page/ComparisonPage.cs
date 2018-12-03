@@ -30,18 +30,16 @@ namespace SNHU_Sched_Landing_Page
             public string day { get; set; }
         }
 
-		public ComparisonPage()
+        Color color = Color.Red; //comparison color
+        Color friendNOTSelected = Color.White; //default friend color
+        Color friendSelected = Color.LawnGreen; //friend selected color
+        Color buttonBackgroundColor = Color.White;
+
+        public ComparisonPage()
         {
             InitializeComponent();
 
-            /*
-             * This code is for the friend view
-             */
-
-
-            var color = Color.Red;
-			var friendNOTSelected = Color.White;
-			var friendSelected = Color.LawnGreen;
+           
 
 
             var friendList = new List<Student>(); //List of all the users friends
@@ -112,7 +110,7 @@ namespace SNHU_Sched_Landing_Page
 				if (s.Name[3] == '1' || s.Name[3] == '2' || s.Name[3] == '3' || s.Name[3] == '4' || s.Name[3] == '5' 
 					|| s.Name[3] == '6' || s.Name[3] == '7' || s.Name[3] == '8')
 				{
-					s.BackColor = Color.White;
+					s.BackColor = buttonBackgroundColor;
 				}
 			}
 			timeBlocks.Clear();
@@ -173,7 +171,7 @@ namespace SNHU_Sched_Landing_Page
 
 					try
 					{
-						this.Controls[combined].BackColor = Color.Red;
+						this.Controls[combined].BackColor = color;
 					}
 					catch (ArgumentException k)
 					{

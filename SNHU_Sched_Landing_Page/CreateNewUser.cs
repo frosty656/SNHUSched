@@ -18,11 +18,14 @@ namespace SNHU_Sched_Landing_Page
             InitializeComponent();
         }
 
+        Color badInput = Color.Red;
+        Color goodInput = Color.Green;
+
         private void SignUpButton_Click(object sender, EventArgs e)
         {
-            bool notAlreadyInDatabase = true;
-			if (SignUpButton.BackColor == Color.Green)
-			{
+			if (SignUpButton.BackColor == goodInput)
+
+            {
 				//Get first and last name from email
 				string email = Email.Text;
 				string firstName = email.Split('.')[0];
@@ -53,11 +56,11 @@ namespace SNHU_Sched_Landing_Page
             if(Email.Text.Contains("@snhu.edu"))
             {
 				
-                EmailColor.BackColor = Color.Green;
+                EmailColor.BackColor = goodInput;
             }
             else
             {
-                EmailColor.BackColor = Color.Red;
+                EmailColor.BackColor = badInput;
             }
             EverythingGood();
         }
@@ -68,17 +71,17 @@ namespace SNHU_Sched_Landing_Page
             if (Password.Text.Length > 21)
             {
                 MessageBox.Show("The password must be between 8 and 20 characters");
-                PasswordColor.BackColor = Color.Red;
+                PasswordColor.BackColor = badInput;
             }
             else
             {
                 if (Password.Text.Length < 8)
                 {
-                    PasswordColor.BackColor = Color.Red;
+                    PasswordColor.BackColor = badInput;
                 }
                 else
                 {
-                    PasswordColor.BackColor = Color.Green;
+                    PasswordColor.BackColor = goodInput;
                 }
             }
             EverythingGood();
@@ -88,11 +91,11 @@ namespace SNHU_Sched_Landing_Page
         {
             if (Password.Text != ConfirmPassword.Text)
             {
-                ConfirmPasswordColor.BackColor = Color.Red;
+                ConfirmPasswordColor.BackColor = badInput;
             }
             else
             {
-                ConfirmPasswordColor.BackColor = Color.Green;
+                ConfirmPasswordColor.BackColor = goodInput;
 
             }
             EverythingGood();
@@ -105,18 +108,18 @@ namespace SNHU_Sched_Landing_Page
             {
                 if (yearOfGraduation < DateTime.Now.Year - 1)
                 {
-                    GradYearColor.BackColor = Color.Red;
+                    GradYearColor.BackColor = badInput;
                 }
                 else
                 {
-                    GradYearColor.BackColor = Color.Green;
+                    GradYearColor.BackColor = goodInput;
                 }
 
 
             }
             else
             {
-                GradYearColor.BackColor = Color.Red;
+                GradYearColor.BackColor = badInput;
             }
             EverythingGood();
         }
@@ -128,26 +131,26 @@ namespace SNHU_Sched_Landing_Page
             {
                 if (Int32.TryParse(StudentID.Text, out studentID))
                 {
-                    StudentIDColor.BackColor = Color.Green;
+                    StudentIDColor.BackColor = goodInput;
                 }
                 else
                 {
-                    StudentIDColor.BackColor = Color.Red;
+                    StudentIDColor.BackColor = badInput;
                 }
             }
             else
             {
-                StudentIDColor.BackColor = Color.Red;
+                StudentIDColor.BackColor = badInput;
             }
             EverythingGood();
         }
 
         private void EverythingGood()
         {
-            if (EmailColor.BackColor == Color.Green && PasswordColor.BackColor == Color.Green && ConfirmPasswordColor.BackColor == Color.Green
-                && GradYearColor.BackColor == Color.Green && StudentIDColor.BackColor == Color.Green)
+            if (EmailColor.BackColor == goodInput && PasswordColor.BackColor == goodInput && ConfirmPasswordColor.BackColor == goodInput
+                && GradYearColor.BackColor == goodInput && StudentIDColor.BackColor == goodInput)
             {
-                SignUpButton.BackColor = Color.Green;
+                SignUpButton.BackColor = goodInput;
             }
             else
             {

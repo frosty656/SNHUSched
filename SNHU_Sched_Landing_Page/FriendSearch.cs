@@ -21,9 +21,9 @@ namespace SNHU_Sched_Landing_Page
         }
         int counter = 0;
 
-        //
-        // MAKE EVERYTHING USE LISTS ARRAYS ARE OVERWRITING EACHOTHER
-        //
+        //Color Definitions For Page:
+        Color areFriendsColor = Color.Green;
+        Color areNOTFriendsColor = Color.Red;
 
         private class Student
         {
@@ -96,17 +96,17 @@ namespace SNHU_Sched_Landing_Page
             int j = 0;
             foreach (var p in studentList)
             {
-                var color = Color.Blue;
+                var color = areNOTFriendsColor;
                 var alreadyFriend = new List<String>();
                 //determin button color
                 MySQLFunctions.getInfo($"SELECT * FROM friendtable WHERE userID = {userInfo.getCurrentUser()} AND friendID = {p.StudentID}", ref alreadyFriend);
 
                 if (alreadyFriend.Count != 0)
                 {
-                    color = Color.Green;
+                    color = areFriendsColor;
                 } else
                 {
-                    color = Color.Red;
+                    color = areNOTFriendsColor;
                 }
 
                 Button btn = new Button();
@@ -162,8 +162,8 @@ namespace SNHU_Sched_Landing_Page
                 if (success)
                 {
                     MessageBox.Show("Friend Added");
-                    btn.ForeColor = Color.Green;
-                    btn.BackColor = Color.Green;
+                    btn.ForeColor = areFriendsColor;
+                    btn.BackColor = areFriendsColor;
                 }
             }
         }
@@ -190,8 +190,8 @@ namespace SNHU_Sched_Landing_Page
             if (dialogResult == DialogResult.Yes)
             {
                 MySQLFunctions.SQLCommand($"DELETE FROM friendtable WHERE userID = {userInfo.getCurrentUser()} AND friendID = {friendID}");
-                btn.BackColor = Color.Red;
-                btn.ForeColor = Color.Red;
+                btn.BackColor = areNOTFriendsColor;
+                btn.ForeColor = areNOTFriendsColor;
 
             }
 

@@ -200,11 +200,11 @@ namespace SNHU_Sched_Landing_Page
 				
 				(sender as Button).BackColor = Color.Green;
 			}
-			else if ((sender as Button).BackColor == Color.OrangeRed)
+			else if ((sender as Button).BackColor != Color.OrangeRed)
 			{
 				DialogResult result = MessageBox.Show("Do you want to override?", "There is already a block here", MessageBoxButtons.YesNo);
 
-				if (result == DialogResult.Yes)
+                if (result == DialogResult.Yes)
 				{
 					classesToDelete.Add(new timeBlock() {startTime = time, day = userday });
 
@@ -217,15 +217,8 @@ namespace SNHU_Sched_Landing_Page
 					var itemToRemove = blockList.Single(r => r.startTime == time && r.day == userday);
 					blockList.Remove(itemToRemove);
 				}
-			}
-			else
-			{
-				var itemToRemove = blockList.Single(r=> r.startTime == time && r.day == userday);
-				blockList.Remove(itemToRemove);
-				(sender as Button).BackColor = Color.White;
 
-			}
-
+            }
 		}
 
 		private void button2_Click(object sender, EventArgs e)
