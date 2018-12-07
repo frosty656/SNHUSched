@@ -62,6 +62,7 @@ namespace SNHU_Sched_Landing_Page
 				if (MySQLFunctions.GenerateHash(passwordInput.Text, usernameInput.Text) == MySQLFunctions.getPass(usernameInput.Text))
 				{
                     userInfo.setCurrentUser(MySQLFunctions.getUserIDFromEmail(usernameInput.Text));
+					userInfo.setCurrentEmail(usernameInput.Text);
 
 					this.Hide();
 					transition.openClassView();

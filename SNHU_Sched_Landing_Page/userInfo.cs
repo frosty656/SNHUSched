@@ -8,7 +8,9 @@ namespace SNHU_Sched_Landing_Page
 {
     class userInfo
     {
-        private static int currentUserID;
+		public static int currentUserID;
+
+		public static string userEmail;
 
         public static void setCurrentUser(int userID)
         {
@@ -19,5 +21,16 @@ namespace SNHU_Sched_Landing_Page
         {
             return currentUserID;
         }
+
+		public static string getCurrentEmail()
+		{
+			return userEmail;
+		}
+
+		public static void setCurrentEmail(string email)
+		{
+			userEmail = email;
+		}
+
     }
 }
