@@ -86,5 +86,15 @@ namespace SNHU_Sched_Landing_Page
 			transition.openNewAccount();
 			this.Close();
         }
-	}
+
+        private void HomePage_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
 }
