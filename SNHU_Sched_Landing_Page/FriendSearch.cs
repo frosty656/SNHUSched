@@ -162,7 +162,6 @@ namespace SNHU_Sched_Landing_Page
 
                 if (success)
                 {
-                    MessageBox.Show("Friend Added");
                     btn.ForeColor = areFriendsColor;
                     btn.BackColor = areFriendsColor;
                 }

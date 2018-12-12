@@ -68,6 +68,7 @@ namespace SNHU_Sched_Landing_Page
                 button.Size = new Size(120,25);
                 button.Font = new Font(button.Font.FontFamily, 12);
 				button.BackColor = friendNOTSelected;
+                button.ForeColor = Color.Black;
                 button.Click += (s, e) => 
                 {
 					//Changes color of buttons to show election

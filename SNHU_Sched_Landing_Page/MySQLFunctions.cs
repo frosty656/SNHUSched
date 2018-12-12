@@ -11,7 +11,7 @@ namespace SNHU_Sched_Landing_Page
 {
 	public static class MySQLFunctions
     {
-        public const string MYSQLPassword = "1pl4ym1d";
+        public const string MYSQLPassword = "beach02";
 
 		public static void SQLCommand(string command)
 		{

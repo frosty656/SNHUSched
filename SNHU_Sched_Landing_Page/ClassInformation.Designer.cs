@@ -100,10 +100,9 @@
             this.label2.BackColor = System.Drawing.Color.DarkBlue;
             this.label2.Font = new System.Drawing.Font("Bahnschrift Condensed", 48F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(290, -3);
-            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label2.Location = new System.Drawing.Point(158, -2);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(357, 134);
+            this.label2.Size = new System.Drawing.Size(205, 77);
             this.label2.TabIndex = 1;
             this.label2.Text = "Classes:";
             // 
@@ -113,10 +112,9 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Bahnschrift SemiBold", 8.142858F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(1468, 2);
-            this.button1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.button1.Location = new System.Drawing.Point(801, 1);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(169, 42);
+            this.button1.Size = new System.Drawing.Size(92, 23);
             this.button1.TabIndex = 3;
             this.button1.Text = "Comparisons";
             this.button1.UseVisualStyleBackColor = false;
@@ -125,10 +123,9 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Location = new System.Drawing.Point(26, 901);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.pictureBox1.Location = new System.Drawing.Point(14, 488);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1745, 107);
+            this.pictureBox1.Size = new System.Drawing.Size(952, 58);
             this.pictureBox1.TabIndex = 109;
             this.pictureBox1.TabStop = false;
             // 
@@ -137,10 +134,9 @@
             this.classnameLabel.AutoSize = true;
             this.classnameLabel.BackColor = System.Drawing.Color.White;
             this.classnameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.classnameLabel.Location = new System.Drawing.Point(44, 916);
-            this.classnameLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.classnameLabel.Location = new System.Drawing.Point(24, 496);
             this.classnameLabel.Name = "classnameLabel";
-            this.classnameLabel.Size = new System.Drawing.Size(226, 39);
+            this.classnameLabel.Size = new System.Drawing.Size(120, 24);
             this.classnameLabel.TabIndex = 110;
             this.classnameLabel.Text = "Class Details:";
             // 
@@ -149,10 +145,9 @@
             this.profLabel.AutoSize = true;
             this.profLabel.BackColor = System.Drawing.Color.White;
             this.profLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.profLabel.Location = new System.Drawing.Point(449, 916);
-            this.profLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.profLabel.Location = new System.Drawing.Point(245, 496);
             this.profLabel.Name = "profLabel";
-            this.profLabel.Size = new System.Drawing.Size(171, 39);
+            this.profLabel.Size = new System.Drawing.Size(94, 24);
             this.profLabel.TabIndex = 111;
             this.profLabel.Text = "Professor:";
             // 
@@ -161,10 +156,9 @@
             this.buildingLabel.AutoSize = true;
             this.buildingLabel.BackColor = System.Drawing.Color.White;
             this.buildingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buildingLabel.Location = new System.Drawing.Point(1305, 916);
-            this.buildingLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.buildingLabel.Location = new System.Drawing.Point(712, 496);
             this.buildingLabel.Name = "buildingLabel";
-            this.buildingLabel.Size = new System.Drawing.Size(149, 39);
+            this.buildingLabel.Size = new System.Drawing.Size(83, 24);
             this.buildingLabel.TabIndex = 112;
             this.buildingLabel.Text = "Building:";
             // 
@@ -173,10 +167,9 @@
             this.roomLabel.AutoSize = true;
             this.roomLabel.BackColor = System.Drawing.Color.White;
             this.roomLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roomLabel.Location = new System.Drawing.Point(792, 916);
-            this.roomLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.roomLabel.Location = new System.Drawing.Point(432, 496);
             this.roomLabel.Name = "roomLabel";
-            this.roomLabel.Size = new System.Drawing.Size(145, 39);
+            this.roomLabel.Size = new System.Drawing.Size(81, 24);
             this.roomLabel.TabIndex = 113;
             this.roomLabel.Text = "Room #:";
             // 
@@ -186,10 +179,9 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Bahnschrift SemiBold", 8.142858F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(1210, 2);
-            this.button2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.button2.Location = new System.Drawing.Point(660, 1);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(246, 42);
+            this.button2.Size = new System.Drawing.Size(134, 23);
             this.button2.TabIndex = 114;
             this.button2.Text = "Edit Schedule";
             this.button2.UseVisualStyleBackColor = false;
@@ -201,10 +193,9 @@
             this.logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.logout.Font = new System.Drawing.Font("Bahnschrift SemiBold", 8.142858F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logout.ForeColor = System.Drawing.Color.White;
-            this.logout.Location = new System.Drawing.Point(1649, 2);
-            this.logout.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.logout.Location = new System.Drawing.Point(899, 1);
             this.logout.Name = "logout";
-            this.logout.Size = new System.Drawing.Size(138, 42);
+            this.logout.Size = new System.Drawing.Size(75, 23);
             this.logout.TabIndex = 115;
             this.logout.Text = "Log Out";
             this.logout.UseVisualStyleBackColor = false;
@@ -215,10 +206,9 @@
             this.fri8.BackColor = System.Drawing.Color.White;
             this.fri8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.fri8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fri8.Location = new System.Drawing.Point(1302, 811);
-            this.fri8.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.fri8.Location = new System.Drawing.Point(710, 439);
             this.fri8.Name = "fri8";
-            this.fri8.Size = new System.Drawing.Size(255, 87);
+            this.fri8.Size = new System.Drawing.Size(139, 47);
             this.fri8.TabIndex = 202;
             this.fri8.UseVisualStyleBackColor = false;
             // 
@@ -227,10 +217,9 @@
             this.fri7.BackColor = System.Drawing.Color.White;
             this.fri7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.fri7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fri7.Location = new System.Drawing.Point(1302, 726);
-            this.fri7.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.fri7.Location = new System.Drawing.Point(710, 393);
             this.fri7.Name = "fri7";
-            this.fri7.Size = new System.Drawing.Size(255, 87);
+            this.fri7.Size = new System.Drawing.Size(139, 47);
             this.fri7.TabIndex = 201;
             this.fri7.UseVisualStyleBackColor = false;
             // 
@@ -239,10 +228,9 @@
             this.fri6.BackColor = System.Drawing.Color.White;
             this.fri6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.fri6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fri6.Location = new System.Drawing.Point(1302, 641);
-            this.fri6.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.fri6.Location = new System.Drawing.Point(710, 347);
             this.fri6.Name = "fri6";
-            this.fri6.Size = new System.Drawing.Size(255, 87);
+            this.fri6.Size = new System.Drawing.Size(139, 47);
             this.fri6.TabIndex = 200;
             this.fri6.UseVisualStyleBackColor = false;
             // 
@@ -251,10 +239,9 @@
             this.fri5.BackColor = System.Drawing.Color.White;
             this.fri5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.fri5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fri5.Location = new System.Drawing.Point(1302, 556);
-            this.fri5.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.fri5.Location = new System.Drawing.Point(710, 301);
             this.fri5.Name = "fri5";
-            this.fri5.Size = new System.Drawing.Size(255, 87);
+            this.fri5.Size = new System.Drawing.Size(139, 47);
             this.fri5.TabIndex = 199;
             this.fri5.UseVisualStyleBackColor = false;
             // 
@@ -263,10 +250,9 @@
             this.fri4.BackColor = System.Drawing.Color.White;
             this.fri4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.fri4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fri4.Location = new System.Drawing.Point(1302, 471);
-            this.fri4.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.fri4.Location = new System.Drawing.Point(710, 255);
             this.fri4.Name = "fri4";
-            this.fri4.Size = new System.Drawing.Size(255, 87);
+            this.fri4.Size = new System.Drawing.Size(139, 47);
             this.fri4.TabIndex = 198;
             this.fri4.UseVisualStyleBackColor = false;
             // 
@@ -275,10 +261,9 @@
             this.fri3.BackColor = System.Drawing.Color.White;
             this.fri3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.fri3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fri3.Location = new System.Drawing.Point(1302, 386);
-            this.fri3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.fri3.Location = new System.Drawing.Point(710, 209);
             this.fri3.Name = "fri3";
-            this.fri3.Size = new System.Drawing.Size(255, 87);
+            this.fri3.Size = new System.Drawing.Size(139, 47);
             this.fri3.TabIndex = 197;
             this.fri3.UseVisualStyleBackColor = false;
             // 
@@ -287,10 +272,9 @@
             this.fri2.BackColor = System.Drawing.Color.White;
             this.fri2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.fri2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fri2.Location = new System.Drawing.Point(1302, 301);
-            this.fri2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.fri2.Location = new System.Drawing.Point(710, 163);
             this.fri2.Name = "fri2";
-            this.fri2.Size = new System.Drawing.Size(255, 87);
+            this.fri2.Size = new System.Drawing.Size(139, 47);
             this.fri2.TabIndex = 196;
             this.fri2.UseVisualStyleBackColor = false;
             // 
@@ -299,10 +283,9 @@
             this.fri1.BackColor = System.Drawing.Color.White;
             this.fri1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.fri1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fri1.Location = new System.Drawing.Point(1302, 216);
-            this.fri1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.fri1.Location = new System.Drawing.Point(710, 117);
             this.fri1.Name = "fri1";
-            this.fri1.Size = new System.Drawing.Size(255, 87);
+            this.fri1.Size = new System.Drawing.Size(139, 47);
             this.fri1.TabIndex = 195;
             this.fri1.UseVisualStyleBackColor = false;
             // 
@@ -311,10 +294,9 @@
             this.thu8.BackColor = System.Drawing.Color.White;
             this.thu8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.thu8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.thu8.Location = new System.Drawing.Point(1049, 811);
-            this.thu8.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.thu8.Location = new System.Drawing.Point(572, 439);
             this.thu8.Name = "thu8";
-            this.thu8.Size = new System.Drawing.Size(255, 87);
+            this.thu8.Size = new System.Drawing.Size(139, 47);
             this.thu8.TabIndex = 194;
             this.thu8.UseVisualStyleBackColor = false;
             // 
@@ -323,10 +305,9 @@
             this.thu7.BackColor = System.Drawing.Color.White;
             this.thu7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.thu7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.thu7.Location = new System.Drawing.Point(1049, 726);
-            this.thu7.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.thu7.Location = new System.Drawing.Point(572, 393);
             this.thu7.Name = "thu7";
-            this.thu7.Size = new System.Drawing.Size(255, 87);
+            this.thu7.Size = new System.Drawing.Size(139, 47);
             this.thu7.TabIndex = 193;
             this.thu7.UseVisualStyleBackColor = false;
             // 
@@ -335,10 +316,9 @@
             this.thu6.BackColor = System.Drawing.Color.White;
             this.thu6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.thu6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.thu6.Location = new System.Drawing.Point(1049, 641);
-            this.thu6.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.thu6.Location = new System.Drawing.Point(572, 347);
             this.thu6.Name = "thu6";
-            this.thu6.Size = new System.Drawing.Size(255, 87);
+            this.thu6.Size = new System.Drawing.Size(139, 47);
             this.thu6.TabIndex = 192;
             this.thu6.UseVisualStyleBackColor = false;
             // 
@@ -347,10 +327,9 @@
             this.thu5.BackColor = System.Drawing.Color.White;
             this.thu5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.thu5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.thu5.Location = new System.Drawing.Point(1049, 556);
-            this.thu5.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.thu5.Location = new System.Drawing.Point(572, 301);
             this.thu5.Name = "thu5";
-            this.thu5.Size = new System.Drawing.Size(255, 87);
+            this.thu5.Size = new System.Drawing.Size(139, 47);
             this.thu5.TabIndex = 191;
             this.thu5.UseVisualStyleBackColor = false;
             // 
@@ -359,10 +338,9 @@
             this.thu4.BackColor = System.Drawing.Color.White;
             this.thu4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.thu4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.thu4.Location = new System.Drawing.Point(1049, 471);
-            this.thu4.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.thu4.Location = new System.Drawing.Point(572, 255);
             this.thu4.Name = "thu4";
-            this.thu4.Size = new System.Drawing.Size(255, 87);
+            this.thu4.Size = new System.Drawing.Size(139, 47);
             this.thu4.TabIndex = 190;
             this.thu4.UseVisualStyleBackColor = false;
             // 
@@ -371,10 +349,9 @@
             this.thu3.BackColor = System.Drawing.Color.White;
             this.thu3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.thu3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.thu3.Location = new System.Drawing.Point(1049, 386);
-            this.thu3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.thu3.Location = new System.Drawing.Point(572, 209);
             this.thu3.Name = "thu3";
-            this.thu3.Size = new System.Drawing.Size(255, 87);
+            this.thu3.Size = new System.Drawing.Size(139, 47);
             this.thu3.TabIndex = 189;
             this.thu3.UseVisualStyleBackColor = false;
             // 
@@ -383,10 +360,9 @@
             this.thu2.BackColor = System.Drawing.Color.White;
             this.thu2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.thu2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.thu2.Location = new System.Drawing.Point(1049, 301);
-            this.thu2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.thu2.Location = new System.Drawing.Point(572, 163);
             this.thu2.Name = "thu2";
-            this.thu2.Size = new System.Drawing.Size(255, 87);
+            this.thu2.Size = new System.Drawing.Size(139, 47);
             this.thu2.TabIndex = 188;
             this.thu2.UseVisualStyleBackColor = false;
             // 
@@ -395,10 +371,9 @@
             this.thu1.BackColor = System.Drawing.Color.White;
             this.thu1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.thu1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.thu1.Location = new System.Drawing.Point(1049, 216);
-            this.thu1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.thu1.Location = new System.Drawing.Point(572, 117);
             this.thu1.Name = "thu1";
-            this.thu1.Size = new System.Drawing.Size(255, 87);
+            this.thu1.Size = new System.Drawing.Size(139, 47);
             this.thu1.TabIndex = 187;
             this.thu1.UseVisualStyleBackColor = false;
             // 
@@ -407,10 +382,9 @@
             this.wed8.BackColor = System.Drawing.Color.White;
             this.wed8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.wed8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.wed8.Location = new System.Drawing.Point(796, 811);
-            this.wed8.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.wed8.Location = new System.Drawing.Point(434, 439);
             this.wed8.Name = "wed8";
-            this.wed8.Size = new System.Drawing.Size(255, 87);
+            this.wed8.Size = new System.Drawing.Size(139, 47);
             this.wed8.TabIndex = 186;
             this.wed8.UseVisualStyleBackColor = false;
             // 
@@ -419,10 +393,9 @@
             this.wed7.BackColor = System.Drawing.Color.White;
             this.wed7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.wed7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.wed7.Location = new System.Drawing.Point(796, 726);
-            this.wed7.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.wed7.Location = new System.Drawing.Point(434, 393);
             this.wed7.Name = "wed7";
-            this.wed7.Size = new System.Drawing.Size(255, 87);
+            this.wed7.Size = new System.Drawing.Size(139, 47);
             this.wed7.TabIndex = 185;
             this.wed7.UseVisualStyleBackColor = false;
             // 
@@ -431,10 +404,9 @@
             this.wed6.BackColor = System.Drawing.Color.White;
             this.wed6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.wed6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.wed6.Location = new System.Drawing.Point(796, 641);
-            this.wed6.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.wed6.Location = new System.Drawing.Point(434, 347);
             this.wed6.Name = "wed6";
-            this.wed6.Size = new System.Drawing.Size(255, 87);
+            this.wed6.Size = new System.Drawing.Size(139, 47);
             this.wed6.TabIndex = 184;
             this.wed6.UseVisualStyleBackColor = false;
             // 
@@ -443,10 +415,9 @@
             this.wed5.BackColor = System.Drawing.Color.White;
             this.wed5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.wed5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.wed5.Location = new System.Drawing.Point(796, 556);
-            this.wed5.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.wed5.Location = new System.Drawing.Point(434, 301);
             this.wed5.Name = "wed5";
-            this.wed5.Size = new System.Drawing.Size(255, 87);
+            this.wed5.Size = new System.Drawing.Size(139, 47);
             this.wed5.TabIndex = 183;
             this.wed5.UseVisualStyleBackColor = false;
             // 
@@ -455,10 +426,9 @@
             this.wed4.BackColor = System.Drawing.Color.White;
             this.wed4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.wed4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.wed4.Location = new System.Drawing.Point(796, 471);
-            this.wed4.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.wed4.Location = new System.Drawing.Point(434, 255);
             this.wed4.Name = "wed4";
-            this.wed4.Size = new System.Drawing.Size(255, 87);
+            this.wed4.Size = new System.Drawing.Size(139, 47);
             this.wed4.TabIndex = 182;
             this.wed4.UseVisualStyleBackColor = false;
             // 
@@ -467,10 +437,9 @@
             this.wed3.BackColor = System.Drawing.Color.White;
             this.wed3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.wed3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.wed3.Location = new System.Drawing.Point(796, 386);
-            this.wed3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.wed3.Location = new System.Drawing.Point(434, 209);
             this.wed3.Name = "wed3";
-            this.wed3.Size = new System.Drawing.Size(255, 87);
+            this.wed3.Size = new System.Drawing.Size(139, 47);
             this.wed3.TabIndex = 181;
             this.wed3.UseVisualStyleBackColor = false;
             // 
@@ -479,10 +448,9 @@
             this.wed2.BackColor = System.Drawing.Color.White;
             this.wed2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.wed2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.wed2.Location = new System.Drawing.Point(796, 301);
-            this.wed2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.wed2.Location = new System.Drawing.Point(434, 163);
             this.wed2.Name = "wed2";
-            this.wed2.Size = new System.Drawing.Size(255, 87);
+            this.wed2.Size = new System.Drawing.Size(139, 47);
             this.wed2.TabIndex = 180;
             this.wed2.UseVisualStyleBackColor = false;
             // 
@@ -491,10 +459,9 @@
             this.wed1.BackColor = System.Drawing.Color.White;
             this.wed1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.wed1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.wed1.Location = new System.Drawing.Point(796, 216);
-            this.wed1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.wed1.Location = new System.Drawing.Point(434, 117);
             this.wed1.Name = "wed1";
-            this.wed1.Size = new System.Drawing.Size(255, 87);
+            this.wed1.Size = new System.Drawing.Size(139, 47);
             this.wed1.TabIndex = 179;
             this.wed1.UseVisualStyleBackColor = false;
             // 
@@ -503,10 +470,9 @@
             this.tue8.BackColor = System.Drawing.Color.White;
             this.tue8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.tue8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tue8.Location = new System.Drawing.Point(543, 811);
-            this.tue8.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tue8.Location = new System.Drawing.Point(296, 439);
             this.tue8.Name = "tue8";
-            this.tue8.Size = new System.Drawing.Size(255, 87);
+            this.tue8.Size = new System.Drawing.Size(139, 47);
             this.tue8.TabIndex = 178;
             this.tue8.UseVisualStyleBackColor = false;
             // 
@@ -515,10 +481,9 @@
             this.tue7.BackColor = System.Drawing.Color.White;
             this.tue7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.tue7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tue7.Location = new System.Drawing.Point(543, 726);
-            this.tue7.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tue7.Location = new System.Drawing.Point(296, 393);
             this.tue7.Name = "tue7";
-            this.tue7.Size = new System.Drawing.Size(255, 87);
+            this.tue7.Size = new System.Drawing.Size(139, 47);
             this.tue7.TabIndex = 177;
             this.tue7.UseVisualStyleBackColor = false;
             // 
@@ -527,10 +492,9 @@
             this.tue6.BackColor = System.Drawing.Color.White;
             this.tue6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.tue6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tue6.Location = new System.Drawing.Point(543, 641);
-            this.tue6.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tue6.Location = new System.Drawing.Point(296, 347);
             this.tue6.Name = "tue6";
-            this.tue6.Size = new System.Drawing.Size(255, 87);
+            this.tue6.Size = new System.Drawing.Size(139, 47);
             this.tue6.TabIndex = 176;
             this.tue6.UseVisualStyleBackColor = false;
             // 
@@ -539,10 +503,9 @@
             this.tue5.BackColor = System.Drawing.Color.White;
             this.tue5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.tue5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tue5.Location = new System.Drawing.Point(543, 556);
-            this.tue5.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tue5.Location = new System.Drawing.Point(296, 301);
             this.tue5.Name = "tue5";
-            this.tue5.Size = new System.Drawing.Size(255, 87);
+            this.tue5.Size = new System.Drawing.Size(139, 47);
             this.tue5.TabIndex = 175;
             this.tue5.UseVisualStyleBackColor = false;
             // 
@@ -551,10 +514,9 @@
             this.tue4.BackColor = System.Drawing.Color.White;
             this.tue4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.tue4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tue4.Location = new System.Drawing.Point(543, 471);
-            this.tue4.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tue4.Location = new System.Drawing.Point(296, 255);
             this.tue4.Name = "tue4";
-            this.tue4.Size = new System.Drawing.Size(255, 87);
+            this.tue4.Size = new System.Drawing.Size(139, 47);
             this.tue4.TabIndex = 174;
             this.tue4.UseVisualStyleBackColor = false;
             // 
@@ -563,10 +525,9 @@
             this.tue3.BackColor = System.Drawing.Color.White;
             this.tue3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.tue3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tue3.Location = new System.Drawing.Point(543, 386);
-            this.tue3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tue3.Location = new System.Drawing.Point(296, 209);
             this.tue3.Name = "tue3";
-            this.tue3.Size = new System.Drawing.Size(255, 87);
+            this.tue3.Size = new System.Drawing.Size(139, 47);
             this.tue3.TabIndex = 173;
             this.tue3.UseVisualStyleBackColor = false;
             // 
@@ -575,10 +536,9 @@
             this.tue2.BackColor = System.Drawing.Color.White;
             this.tue2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.tue2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tue2.Location = new System.Drawing.Point(543, 301);
-            this.tue2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tue2.Location = new System.Drawing.Point(296, 163);
             this.tue2.Name = "tue2";
-            this.tue2.Size = new System.Drawing.Size(255, 87);
+            this.tue2.Size = new System.Drawing.Size(139, 47);
             this.tue2.TabIndex = 172;
             this.tue2.UseVisualStyleBackColor = false;
             // 
@@ -587,10 +547,9 @@
             this.tue1.BackColor = System.Drawing.Color.White;
             this.tue1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.tue1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tue1.Location = new System.Drawing.Point(543, 216);
-            this.tue1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tue1.Location = new System.Drawing.Point(296, 117);
             this.tue1.Name = "tue1";
-            this.tue1.Size = new System.Drawing.Size(255, 87);
+            this.tue1.Size = new System.Drawing.Size(139, 47);
             this.tue1.TabIndex = 171;
             this.tue1.UseVisualStyleBackColor = false;
             // 
@@ -599,10 +558,9 @@
             this.mon8.BackColor = System.Drawing.Color.White;
             this.mon8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.mon8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mon8.Location = new System.Drawing.Point(290, 811);
-            this.mon8.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.mon8.Location = new System.Drawing.Point(158, 439);
             this.mon8.Name = "mon8";
-            this.mon8.Size = new System.Drawing.Size(255, 87);
+            this.mon8.Size = new System.Drawing.Size(139, 47);
             this.mon8.TabIndex = 170;
             this.mon8.UseVisualStyleBackColor = false;
             // 
@@ -611,10 +569,9 @@
             this.mon7.BackColor = System.Drawing.Color.White;
             this.mon7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.mon7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mon7.Location = new System.Drawing.Point(290, 726);
-            this.mon7.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.mon7.Location = new System.Drawing.Point(158, 393);
             this.mon7.Name = "mon7";
-            this.mon7.Size = new System.Drawing.Size(255, 87);
+            this.mon7.Size = new System.Drawing.Size(139, 47);
             this.mon7.TabIndex = 169;
             this.mon7.UseVisualStyleBackColor = false;
             // 
@@ -623,10 +580,9 @@
             this.mon6.BackColor = System.Drawing.Color.White;
             this.mon6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.mon6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mon6.Location = new System.Drawing.Point(290, 641);
-            this.mon6.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.mon6.Location = new System.Drawing.Point(158, 347);
             this.mon6.Name = "mon6";
-            this.mon6.Size = new System.Drawing.Size(255, 87);
+            this.mon6.Size = new System.Drawing.Size(139, 47);
             this.mon6.TabIndex = 168;
             this.mon6.UseVisualStyleBackColor = false;
             // 
@@ -635,10 +591,9 @@
             this.mon5.BackColor = System.Drawing.Color.White;
             this.mon5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.mon5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mon5.Location = new System.Drawing.Point(290, 556);
-            this.mon5.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.mon5.Location = new System.Drawing.Point(158, 301);
             this.mon5.Name = "mon5";
-            this.mon5.Size = new System.Drawing.Size(255, 87);
+            this.mon5.Size = new System.Drawing.Size(139, 47);
             this.mon5.TabIndex = 167;
             this.mon5.UseVisualStyleBackColor = false;
             // 
@@ -647,10 +602,9 @@
             this.mon4.BackColor = System.Drawing.Color.White;
             this.mon4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.mon4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mon4.Location = new System.Drawing.Point(290, 471);
-            this.mon4.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.mon4.Location = new System.Drawing.Point(158, 255);
             this.mon4.Name = "mon4";
-            this.mon4.Size = new System.Drawing.Size(255, 87);
+            this.mon4.Size = new System.Drawing.Size(139, 47);
             this.mon4.TabIndex = 166;
             this.mon4.UseVisualStyleBackColor = false;
             // 
@@ -659,10 +613,9 @@
             this.mon3.BackColor = System.Drawing.Color.White;
             this.mon3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.mon3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mon3.Location = new System.Drawing.Point(290, 386);
-            this.mon3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.mon3.Location = new System.Drawing.Point(158, 209);
             this.mon3.Name = "mon3";
-            this.mon3.Size = new System.Drawing.Size(255, 87);
+            this.mon3.Size = new System.Drawing.Size(139, 47);
             this.mon3.TabIndex = 165;
             this.mon3.UseVisualStyleBackColor = false;
             // 
@@ -671,10 +624,9 @@
             this.mon2.BackColor = System.Drawing.Color.White;
             this.mon2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.mon2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mon2.Location = new System.Drawing.Point(290, 301);
-            this.mon2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.mon2.Location = new System.Drawing.Point(158, 163);
             this.mon2.Name = "mon2";
-            this.mon2.Size = new System.Drawing.Size(255, 87);
+            this.mon2.Size = new System.Drawing.Size(139, 47);
             this.mon2.TabIndex = 164;
             this.mon2.UseVisualStyleBackColor = false;
             // 
@@ -683,10 +635,9 @@
             this.mon1.BackColor = System.Drawing.Color.White;
             this.mon1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.mon1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mon1.Location = new System.Drawing.Point(290, 216);
-            this.mon1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.mon1.Location = new System.Drawing.Point(158, 117);
             this.mon1.Name = "mon1";
-            this.mon1.Size = new System.Drawing.Size(255, 87);
+            this.mon1.Size = new System.Drawing.Size(139, 47);
             this.mon1.TabIndex = 163;
             this.mon1.UseVisualStyleBackColor = false;
             // 
@@ -695,12 +646,12 @@
             this.label13.BackColor = System.Drawing.Color.Gainsboro;
             this.label13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label13.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(132, 811);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Location = new System.Drawing.Point(72, 439);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(158, 85);
+            this.label13.Size = new System.Drawing.Size(87, 47);
             this.label13.TabIndex = 162;
-            this.label13.Text = "630p-\r\n745pm";
+            this.label13.Text = "6:30pm-\r\n7:45pm";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label12
@@ -708,12 +659,12 @@
             this.label12.BackColor = System.Drawing.Color.Gainsboro;
             this.label12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label12.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(132, 726);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Location = new System.Drawing.Point(72, 393);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(158, 85);
+            this.label12.Size = new System.Drawing.Size(87, 47);
             this.label12.TabIndex = 161;
-            this.label12.Text = "5p-\r\n615pm";
+            this.label12.Text = "5:00pm-\r\n6:15pm";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label11
@@ -721,12 +672,12 @@
             this.label11.BackColor = System.Drawing.Color.Gainsboro;
             this.label11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label11.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(132, 641);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Location = new System.Drawing.Point(72, 347);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(158, 85);
+            this.label11.Size = new System.Drawing.Size(87, 47);
             this.label11.TabIndex = 160;
-            this.label11.Text = "330p-\r\n445pm";
+            this.label11.Text = "3:30pm-\r\n4:45pm";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label10
@@ -734,12 +685,12 @@
             this.label10.BackColor = System.Drawing.Color.Gainsboro;
             this.label10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label10.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(132, 556);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Location = new System.Drawing.Point(72, 301);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(158, 85);
+            this.label10.Size = new System.Drawing.Size(87, 47);
             this.label10.TabIndex = 159;
-            this.label10.Text = "2pm-\r\n315pm";
+            this.label10.Text = "2:00pm-\r\n3:15pm";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label9
@@ -747,12 +698,12 @@
             this.label9.BackColor = System.Drawing.Color.Gainsboro;
             this.label9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label9.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(132, 471);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(72, 255);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(158, 85);
+            this.label9.Size = new System.Drawing.Size(87, 47);
             this.label9.TabIndex = 158;
-            this.label9.Text = "1230p-\r\n145pm";
+            this.label9.Text = "12:30pm-\r\n1:45pm";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label8
@@ -760,12 +711,12 @@
             this.label8.BackColor = System.Drawing.Color.Gainsboro;
             this.label8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label8.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(132, 386);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(72, 209);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(158, 85);
+            this.label8.Size = new System.Drawing.Size(87, 47);
             this.label8.TabIndex = 157;
-            this.label8.Text = "11am-\r\n1215pm";
+            this.label8.Text = "11:00am-\r\n12:15pm";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label7
@@ -773,12 +724,12 @@
             this.label7.BackColor = System.Drawing.Color.Gainsboro;
             this.label7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label7.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(132, 301);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(72, 163);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(158, 85);
+            this.label7.Size = new System.Drawing.Size(87, 47);
             this.label7.TabIndex = 156;
-            this.label7.Text = "930am-\r\n1045a";
+            this.label7.Text = "9:30am-\r\n10:45am";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label6
@@ -786,12 +737,12 @@
             this.label6.BackColor = System.Drawing.Color.Gainsboro;
             this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label6.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(132, 216);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(72, 117);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(158, 85);
+            this.label6.Size = new System.Drawing.Size(87, 47);
             this.label6.TabIndex = 155;
-            this.label6.Text = "8am-\r\n915am\r\n";
+            this.label6.Text = "8:00am-\r\n9:15am\r\n";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label5
@@ -799,10 +750,10 @@
             this.label5.BackColor = System.Drawing.Color.Gainsboro;
             this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label5.Font = new System.Drawing.Font("Bahnschrift SemiBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(1302, 131);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(710, 71);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(255, 85);
+            this.label5.Size = new System.Drawing.Size(140, 47);
             this.label5.TabIndex = 154;
             this.label5.Text = "Friday";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -812,10 +763,10 @@
             this.label4.BackColor = System.Drawing.Color.Gainsboro;
             this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label4.Font = new System.Drawing.Font("Bahnschrift SemiBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(1049, 131);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(572, 71);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(253, 85);
+            this.label4.Size = new System.Drawing.Size(139, 47);
             this.label4.TabIndex = 153;
             this.label4.Text = "Thursday";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -825,10 +776,10 @@
             this.label3.BackColor = System.Drawing.Color.Gainsboro;
             this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label3.Font = new System.Drawing.Font("Bahnschrift SemiBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(796, 131);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(434, 71);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(253, 85);
+            this.label3.Size = new System.Drawing.Size(139, 47);
             this.label3.TabIndex = 152;
             this.label3.Text = "Wednesday";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -838,10 +789,10 @@
             this.label1.BackColor = System.Drawing.Color.Gainsboro;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label1.Font = new System.Drawing.Font("Bahnschrift SemiBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(543, 131);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(296, 71);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(253, 85);
+            this.label1.Size = new System.Drawing.Size(139, 47);
             this.label1.TabIndex = 151;
             this.label1.Text = "Tuesday";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -851,10 +802,10 @@
             this.label14.BackColor = System.Drawing.Color.Gainsboro;
             this.label14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label14.Font = new System.Drawing.Font("Bahnschrift SemiBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(290, 131);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Location = new System.Drawing.Point(158, 71);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(253, 85);
+            this.label14.Size = new System.Drawing.Size(139, 47);
             this.label14.TabIndex = 150;
             this.label14.Text = "Monday";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -865,10 +816,9 @@
             this.EditAccountInfoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.EditAccountInfoButton.Font = new System.Drawing.Font("Bahnschrift SemiBold", 8.142858F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EditAccountInfoButton.ForeColor = System.Drawing.Color.White;
-            this.EditAccountInfoButton.Location = new System.Drawing.Point(952, 2);
-            this.EditAccountInfoButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.EditAccountInfoButton.Location = new System.Drawing.Point(519, 1);
             this.EditAccountInfoButton.Name = "EditAccountInfoButton";
-            this.EditAccountInfoButton.Size = new System.Drawing.Size(246, 42);
+            this.EditAccountInfoButton.Size = new System.Drawing.Size(134, 23);
             this.EditAccountInfoButton.TabIndex = 203;
             this.EditAccountInfoButton.Text = "Edit Account Info";
             this.EditAccountInfoButton.UseVisualStyleBackColor = false;
@@ -876,11 +826,11 @@
             // 
             // ClassInformation
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.DarkBlue;
-            this.ClientSize = new System.Drawing.Size(1791, 999);
+            this.ClientSize = new System.Drawing.Size(977, 541);
             this.Controls.Add(this.EditAccountInfoButton);
             this.Controls.Add(this.fri8);
             this.Controls.Add(this.fri7);
@@ -944,7 +894,6 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "ClassInformation";
             this.Text = "Class Info";
             this.Load += new System.EventHandler(this.LoginHome_Load);

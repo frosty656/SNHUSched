@@ -200,7 +200,13 @@ namespace SNHU_Sched_Landing_Page
 				
 				(sender as Button).BackColor = Color.Green;
 			}
-			else if ((sender as Button).BackColor != Color.OrangeRed)
+            else if ((sender as Button).BackColor == Color.Green)
+            {
+                var itemToRemove = blockList.Single(r => r.startTime == time && r.day == userday);
+                blockList.Remove(itemToRemove);
+                (sender as Button).BackColor = Color.White;
+            }
+			else
 			{
 				DialogResult result = MessageBox.Show("Do you want to override?", "There is already a block here", MessageBoxButtons.YesNo);
 
