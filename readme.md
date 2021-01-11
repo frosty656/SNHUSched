@@ -12,9 +12,9 @@
 
 ## Screenshots
 ### Welcome
-![Welcome]https://github.com/frosty656/SNHUSched/blob/master/Images/LandingPage.png)
+![Welcome](https://github.com/frosty656/SNHUSched/blob/master/Images/LandingPage.png)
 ### Register
-![Register]https://github.com/frosty656/SNHUSched/blob/master/Images/SignupPage.png)
+![Register](https://github.com/frosty656/SNHUSched/blob/master/Images/SignupPage.png)
 ### Add Classes
 ![Add Class](https://github.com/frosty656/SNHUSched/blob/master/Images/add%20classes.png)
 
