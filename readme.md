@@ -3,12 +3,12 @@
 ### This is an application a peer and I built sophomore year to easily compare schedules between multiple students. The aim was to make inputting and retrieving the information as easy as possible.
 
 ## Features
-### Create account
-### Input schedule with class information
-### Search and add friends
-### View your schedule overlaid with other students
-### Ability to select what users are overlaid
-### Ability to change my own information
+### - Create account
+### - Input schedule with class information
+### - Search and add friends
+### - View your schedule overlaid with other students
+### - Ability to select what users are overlaid
+### - Ability to change my own information
 
 ## Screenshots
 ### Welcome
