@@ -24,6 +24,8 @@
 ### Compare Schedule
 ![Compare Sched](https://github.com/frosty656/SNHUSched/blob/master/Images/ComparePage.png)
 
+## Old UI
+
 ### Edit Account Details
 ![Edit Account Details](https://github.com/frosty656/SNHUSched/blob/master/Images/edit%20account%20details.png)
 
