@@ -13,17 +13,23 @@
 ## Screenshots
 ### Welcome
 ![Welcome](https://github.com/frosty656/SNHUSched/blob/master/Images/LandingPage.png)
+
 ### Register
 ![Register](https://github.com/frosty656/SNHUSched/blob/master/Images/SignupPage.png)
-### Add Classes
-![Add Class](https://github.com/frosty656/SNHUSched/blob/master/Images/add%20classes.png)
+
 
 ### Personal Schedule
 ![Personal](https://github.com/frosty656/SNHUSched/blob/master/Images/SchedulePage.png)
-### Add Friends
-![Add Friends](https://github.com/frosty656/SNHUSched/blob/master/Images/Friend%20Search.png)
+
 ### Compare Schedule
 ![Compare Sched](https://github.com/frosty656/SNHUSched/blob/master/Images/ComparePage.png)
+
 ### Edit Account Details
 ![Edit Account Details](https://github.com/frosty656/SNHUSched/blob/master/Images/edit%20account%20details.png)
+
+### Add Classes
+![Add Class](https://github.com/frosty656/SNHUSched/blob/master/Images/add%20classes.png)
+
+### Add Friends
+![Add Friends](https://github.com/frosty656/SNHUSched/blob/master/Images/Friend%20Search.png)
 
